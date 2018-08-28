@@ -9,7 +9,7 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){ 
+    private Solution(){
         /**.
          * { item_description }
          */
@@ -21,7 +21,7 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void rootsOfQuadraticEquation(final int a,final int b,final int c)
+    public static void rootsOQD(final int a,final int b,final int c)
     { 
         /**.
          * { Function definition }
@@ -45,7 +45,7 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        rootsOQD(a, b, c);
     }
     /**.
     Need to write the rootsOfQuadraticEquation function and print the output.
