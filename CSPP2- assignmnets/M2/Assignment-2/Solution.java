@@ -9,7 +9,7 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
         /**.
          * { item_description }
          */
@@ -21,8 +21,7 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void rootsOQD(final int a, final int b, final int c)
-    {
+    public static void rootsOQD(final int a, final int b, final int c) {
         /**.
          * { Function definition }
          */
