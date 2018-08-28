@@ -26,10 +26,10 @@ public class Solution {
         /**.
          * {Recursive function to find the power }
          */
-        if (exponent != 0){
+        if (exponent != 0) {
             return (base * power(base, exponent - 1));
         }
-        else{
+        else {
             return 1;
         }
     }
@@ -45,7 +45,7 @@ public class Solution {
         Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result = power(base,exponent);
+        long result = power(base, exponent);
         System.out.println(result);
     }
     /**.
