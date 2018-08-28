@@ -21,8 +21,8 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void rootsOQD(final int a,final int b,final int c)
-    { 
+    public static void rootsOQD(final int a, final int b, final int c)
+    {
         /**.
          * { Function definition }
          */
@@ -37,7 +37,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { main function }
          */
