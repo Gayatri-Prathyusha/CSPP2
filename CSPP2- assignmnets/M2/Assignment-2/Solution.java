@@ -5,7 +5,7 @@ public class Solution {
         double sq = Math.sqrt((b*b) - (4*a*c));
         double quad1 = ((-b + sq)/(2 * a));
         double quad2 = ((-b - sq)/(2 * a));
-        System.out.println(quad1 + quad2);
+        System.out.println(quad1 +" "+ quad2);
         //System.out.println(quad2);
 
 	}
