@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
@@ -27,8 +27,7 @@ public class Solution {
          * {Recursive function to find the power }
          */
         if (exponent != 0) {
-            return (base * power(base, exponent - 1));
-        }
+            return (base * power(base, exponent - 1)); }
         else {
             return 1;
         }
@@ -42,7 +41,7 @@ public class Solution {
         /**.
          * { Main Function}
          */
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
