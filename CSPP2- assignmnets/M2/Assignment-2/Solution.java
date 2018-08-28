@@ -9,7 +9,7 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution(){ 
         /**.
          * { item_description }
          */
@@ -21,7 +21,8 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void rootsOfQuadraticEquation(int a,int b,int c){
+    public static void rootsOfQuadraticEquation(final int a,final int b,final int c)
+    { 
         /**.
          * { Function definition }
          */
