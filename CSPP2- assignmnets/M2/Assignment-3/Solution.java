@@ -14,15 +14,30 @@ public class Solution {
          * { item_description }
          */
     }
+    /**.
+     * { function_description }
+     *
+     * @param      base      The base
+     * @param      exponent  The exponent
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static long power(final int base, final int exponent) {
         /**.
          * {Recursive function to find the power }
          */
-        if (exponent != 0)
+        if (exponent != 0){
             return (base * power(base, exponent - 1));
-        else
+        }
+        else{
             return 1;
+        }
     }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**.
          * { Main Function}
