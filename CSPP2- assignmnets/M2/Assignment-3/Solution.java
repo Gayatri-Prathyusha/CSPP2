@@ -1,20 +1,39 @@
+/**.
+ * { Program to find the a power b with the hep of recursion }
+ */
 import java.util.Scanner;
-
+/**.
+ * Class for solution.
+ */
 public class Solution {
-    public static long power(int base, int exponent) {
-    	if (exponent != 0)
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**.
+         * { item_description }
+         */
+    }
+    public static long power(final int base, final int exponent) {
+        /**.
+         * {Recursive function to find the power }
+         */
+        if (exponent != 0)
             return (base * power(base, exponent - 1));
         else
             return 1;
     }
-	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);      
+    public static void main(final String[] args) {
+        /**.
+         * { Main Function}
+         */
+        Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base,exponent);
         System.out.println(result);
-	}
-	/*
-	Need to write the power function and print the output.
-	*/
+    }
+    /**.
+    Need to write the power function and print the output.
+    */
 }
