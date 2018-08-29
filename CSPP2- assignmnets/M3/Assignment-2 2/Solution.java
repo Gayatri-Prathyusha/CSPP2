@@ -35,7 +35,6 @@ public final class Solution {
         count++;
         }
         n = n / 10;
-        
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -43,9 +42,8 @@ public final class Solution {
     return count;
 }
  
-    // Counts the number of '7' 
+    // Counts the number of '7'
     // digits between 0 and n
-
     /**.
      * { function_description }
      *
@@ -72,7 +70,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { Main function}
          */
