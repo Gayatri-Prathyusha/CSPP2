@@ -73,10 +73,8 @@ public final class Solution {
         /**.
          * { Main function}
          */
-        
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(numberinrange(n));
- 
     }
 }
