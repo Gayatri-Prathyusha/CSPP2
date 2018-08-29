@@ -52,7 +52,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static int numberinrange(int n) {
+    static int numberinrange(final int n) {
     	/**.
     	 * { Function to retuen the Number of 7's present until n value }
     	 */
@@ -71,7 +71,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
     	/**.
     	 * { Main function}
     	 */
