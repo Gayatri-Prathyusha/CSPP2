@@ -10,7 +10,7 @@ public class Solution {
         {
             // Checks if i is factor of both integers
             if(a % i == 0 && b % i == 0)
-                greatcd = greatcd + i;
+                greatcd =  i;
         }
         return greatcd;
     }
