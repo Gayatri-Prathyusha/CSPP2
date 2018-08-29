@@ -26,7 +26,7 @@ public final class Solution {
         /**.
          * { Function to return the number of 7's present in one number}
          */
-    int x = n;    
+    int x = n;
     int count = 0;
     while (x > 0) {
         /**.
@@ -55,13 +55,13 @@ public final class Solution {
         /**.
          * { Function to retuen the Number of 7's present until n value }
          */
-     
         // Initialize result
         int count = 0;
         // Count 7's in every number
         // from 7 to n
-        for (int i = 7; i <= n; i++)
+        for (int i = 7; i <= n; i++) {
         count += numberof7s(i);
+    }
         return count;
 }
     /**.
