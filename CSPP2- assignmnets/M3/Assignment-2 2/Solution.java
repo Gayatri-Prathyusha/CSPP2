@@ -7,30 +7,30 @@ import java.util.Scanner;
  */
 
 public class Solution {
-	/**.
-	 * Constructs the object.
-	 */
-	private Solution() {
-		/**.
-		 * { item_description }
-		 */
-	}
-	/**.
-	 * { function_description }
-	 *
-	 * @param      n     { parameter_description }
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
-	static int numberof7s(int n) {
-		/**.
-		 * { Function to return the number of 7's present in one number}
-		 */
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**.
+         * { item_description }
+         */
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    static int numberof7s(int n) {
+        /**.
+         * { Function to return the number of 7's present in one number}
+         */
     int count = 0;
     while (n > 0) {
-    	/**.
-    	 * { item_description }
-    	 */
+        /**.
+         * { item_description }
+         */
         if (n % 10 == 7)
         count++;
  
@@ -53,9 +53,9 @@ public class Solution {
      * @return     { description_of_the_return_value }
      */
     static int numberinrange(int n) {
-    	/**.
-    	 * { Function to retuen the Number of 7's present until n value }
-    	 */
+        /**.
+         * { Function to retuen the Number of 7's present until n value }
+         */
      
         // Initialize result
         int count = 0; 
@@ -72,9 +72,9 @@ public class Solution {
      * @param      args  The arguments
      */
     public static void main(String[] args) {
-    	/**.
-    	 * { Main function}
-    	 */
+        /**.
+         * { Main function}
+         */
         
         Scanner s=new Scanner(System.in);      
         int n = s.nextInt();
