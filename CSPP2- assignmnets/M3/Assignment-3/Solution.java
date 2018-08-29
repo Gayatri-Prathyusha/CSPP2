@@ -5,6 +5,9 @@ import java.util.Scanner;
 /*
     Do not modify this main function.
     */
+    /**.
+     * { item_description }
+     */
 public final class Solution {
     /**.
      * Constructs the object.
