@@ -41,7 +41,6 @@ public final class Solution {
      */
     return count;
 }
- 
     // Counts the number of '7'
     // digits between 0 and n
     /**.
@@ -57,9 +56,8 @@ public final class Solution {
          */
      
         // Initialize result
-        int count = 0; 
- 
-        // Count 7's in every number 
+        int count = 0;
+        // Count 7's in every number
         // from 7 to n
         for (int i = 7; i <= n; i++)
         count += numberof7s(i);
