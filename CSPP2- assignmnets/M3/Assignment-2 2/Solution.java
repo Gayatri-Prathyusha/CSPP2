@@ -31,10 +31,11 @@ public final class Solution {
         /**.
          * { item_description }
          */
-        if (n % 10 == 7)
+        if (n % 10 == 7) {
         count++;
- 
+        }
         n = n / 10;
+        
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
