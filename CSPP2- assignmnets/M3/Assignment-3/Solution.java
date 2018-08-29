@@ -32,7 +32,7 @@ public final class Solution {
         int greatcd = 0;
         for (int i = 1; i <= a && i <= b; ++i) {
             // Checks if i is factor of both integers
-            if(a % i == 0 && b % i == 0) {
+            if (a % i == 0 && b % i == 0) {
                 greatcd =  i;
             }
         }
