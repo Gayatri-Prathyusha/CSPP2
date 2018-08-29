@@ -22,7 +22,7 @@ public class Solution {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	static int numberof7s(final int n) {
+	static int numberof7s(int n) {
 		/**.
 		 * { Function to return the number of 7's present in one number}
 		 */
@@ -31,13 +31,10 @@ public class Solution {
     	/**.
     	 * { item_description }
     	 */
-        if (n % 10 == 7) {
-
-        
+        if (n % 10 == 7)
         count++;
  
         n = n / 10;
-        }
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -55,7 +52,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static int numberinrange(final int n) {
+    static int numberinrange(int n) {
     	/**.
     	 * { Function to retuen the Number of 7's present until n value }
     	 */
@@ -74,7 +71,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
     	/**.
     	 * { Main function}
     	 */
