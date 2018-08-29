@@ -1,12 +1,12 @@
-/**
+/**.
  * { Program to find the Greatest common divisor of two numbers }
  */
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
@@ -14,7 +14,7 @@ public final class Solution {
          * { item_description }
          */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      a     { parameter_description }
@@ -23,7 +23,7 @@ public final class Solution {
      * @return     { description_of_the_return_value }
      */
     public static int gcd(final int a, final int b) {
-        /**
+        /**.
          * { var_description }
          */
         int greatcd = 0;
@@ -36,20 +36,22 @@ public final class Solution {
         return greatcd;
     }
 
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-
-        Scanner s=new Scanner(System.in);      
+        /**
+         * { var_description }
+         */
+        Scanner s=new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
 
         System.out.println(gcd(n1, n2));
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
 }
