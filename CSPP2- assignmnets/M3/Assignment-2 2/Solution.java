@@ -10,6 +10,14 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
+    public static final int N_O = 10;
+    /**
+     * Constructs the object.
+     */
+    public static final int N_U_M = 7;
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         /**.
          * { item_description }
@@ -32,10 +40,10 @@ public final class Solution {
         /**.
          * { item_description }
          */
-        if (x % 10 == 7) {
+        if (x % N_O == N_U_M) {
         count++;
         }
-        x = x / 10;
+        x = x / N_O;
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -59,7 +67,7 @@ public final class Solution {
         int count = 0;
         // Count 7's in every number
         // from 7 to n
-        for (int i = 7; i <= n; i++) {
+        for (int i = N_U_M; i <= n; i++) {
         count += numberof7s(i);
     }
         return count;
