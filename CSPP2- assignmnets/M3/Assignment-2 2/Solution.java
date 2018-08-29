@@ -22,19 +22,20 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static int numberof7s(int n) {
+    static int numberof7s(final int n) {
         /**.
          * { Function to return the number of 7's present in one number}
          */
+    int x = n;    
     int count = 0;
-    while (n > 0) {
+    while (x > 0) {
         /**.
          * { item_description }
          */
-        if (n % 10 == 7) {
+        if (x % 10 == 7) {
         count++;
         }
-        n = n / 10;
+        x = x / 10;
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -50,7 +51,7 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static int numberinrange(int n) {
+    static int numberinrange(final int n) {
         /**.
          * { Function to retuen the Number of 7's present until n value }
          */
