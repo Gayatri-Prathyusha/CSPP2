@@ -30,11 +30,11 @@ public final class Solution {
          * { var_description }
          */
         int greatcd = 0;
-        for(int i = 1; i <= a && i <= b; ++i)
-        {
+        for (int i = 1; i <= a && i <= b; ++i) {
             // Checks if i is factor of both integers
-            if(a % i == 0 && b % i == 0)
+            if(a % i == 0 && b % i == 0) {
                 greatcd =  i;
+            }
         }
         return greatcd;
     }
@@ -48,7 +48,7 @@ public final class Solution {
         /**
          * { var_description }
          */
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
 
