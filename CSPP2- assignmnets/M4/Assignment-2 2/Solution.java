@@ -1,21 +1,21 @@
-/**
+/**.
  * { Program to find the addition of two matrices}
  */
 import java.util.Scanner;
-/**
+/**.
  * { item_description }
  */
 public final class Solution {
-    /**
+    /**.
      * { item_description }
      */
     /* Fill the main function to print resultant of addition of matrices*/
     private Solution() {
-        /**
+        /**.
          * { item_description }
          */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      a     { parameter_description }
@@ -26,7 +26,7 @@ public final class Solution {
      * @param      c2    The c 2
      */
     public static void addmatrix(final int[][] a, final int[][] b, final int r1, final int c1, final int r2, final int c2) {
-        /**
+        /**.
          * { var_description }
          */
         
@@ -52,13 +52,13 @@ public final class Solution {
             System.out.println("not possible");
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(String[] args) {
-        /**
+        /**.
          * { var_description }
          */
         Scanner sc = new Scanner(System.in);
@@ -72,7 +72,6 @@ public final class Solution {
                 a[i][j] = x;
             }
         }
-        // Scanner s = new Scanner(System.in);
         int rows2 = sc.nextInt();
         int cols2 = sc.nextInt();
         sc.nextLine();
