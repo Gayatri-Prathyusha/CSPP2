@@ -10,6 +10,9 @@ public final class Solution {
      * { item_description }
      */
     /* Fill the main function to print resultant of addition of matrices*/
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         /**.
          * { item_description }
@@ -25,7 +28,8 @@ public final class Solution {
      * @param      r2    The r 2
      * @param      c2    The c 2
      */
-    public static void addmatrix(final int[][] a, final int[][] b, final int r1, final int c1, final int r2, final int c2) {
+    public static void addmat(final int[][] a, final int[][] b,
+     final int r1, final int c1, final int r2, final int c2) {
         /**.
          * { var_description }
          */
@@ -82,7 +86,7 @@ public final class Solution {
                 b[i][j] = y;
             }
         }
-        addmatrix(a, b, rows, cols, rows2, cols2);
+        addmat(a, b, rows, cols, rows2, cols2);
 
     }
 }
