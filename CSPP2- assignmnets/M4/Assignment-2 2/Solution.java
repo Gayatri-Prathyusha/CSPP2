@@ -47,7 +47,6 @@ public final class Solution {
         }
         System.out.println(c[i][c2 - 1]);
         }
-    
         } else {
             System.out.println("not possible");
         }
@@ -65,7 +64,7 @@ public final class Solution {
         int rows = sc.nextInt();
         int cols = sc.nextInt();
         sc.nextLine();
-        int[][] a= new int[rows][cols];
+        int[][] a = new int[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 int x = sc.nextInt();
