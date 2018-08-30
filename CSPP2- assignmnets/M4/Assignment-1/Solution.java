@@ -1,13 +1,13 @@
 /**
  * { program to find the largest numbers in the given array}
  */
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Class for solution.
  */
-public class Solution
-{/*
+public final class Solution { 
+    /*
     Fill this main function to print maximum of given array
     */
     /**
