@@ -31,7 +31,7 @@ public final class Solution {
          * { var_description }
          */
         int max = arr[0];
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             if (max < arr[i]) {
                 max = arr[i];
             }
@@ -47,8 +47,8 @@ public final class Solution {
         /**.
          * { var_description }
          */
-        Scanner sc=new Scanner(System.in);
-        int n= sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
             int b = sc.nextInt();
