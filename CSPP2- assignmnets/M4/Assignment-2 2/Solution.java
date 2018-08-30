@@ -13,9 +13,10 @@ public class Solution {
                 }
             }
             for (int i = 0; i < r1; i++) {
-                for (int j = 0; j < c2; j++) {
-                    System.out.println(c[i][j]);
+                for (int j = 0; j < c2-1; j++) {
+                    System.out.print(c[i][j] +" ");
         }
+        System.out.println(c[i][c2-1]);
 
             
         }
