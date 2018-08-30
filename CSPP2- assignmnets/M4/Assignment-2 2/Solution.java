@@ -33,23 +33,19 @@ public final class Solution {
         /**.
          * { var_description }
          */
-        
         int[][] c = new int[r1][c2];
         if (r1 == r2 && c1 == c2) {
-            for(int i = 0; i < r1; i++) {
+            for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c2; j++) {
-                    
-                    c[i][j] = a[i][j] + b[i][j]; 
+                    c[i][j] = a[i][j] + b[i][j];
 
                 }
             }
             for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c2 - 1; j++) {
-                    System.out.print(c[i][j] +" ");
+                    System.out.print(c[i][j] + " ");
         }
         System.out.println(c[i][c2 - 1]);
-
-            
         }
     
         } else {
@@ -61,7 +57,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
