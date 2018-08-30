@@ -2,7 +2,13 @@
  * { Program to find the addition of two matrices}
  */
 import java.util.Scanner;
+/**
+ * { item_description }
+ */
 public final class Solution {
+    /**
+     * { item_description }
+     */
     /* Fill the main function to print resultant of addition of matrices*/
     private Solution() {
         /**
