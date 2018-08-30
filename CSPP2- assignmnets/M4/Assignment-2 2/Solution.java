@@ -28,6 +28,7 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int rows = sc.nextInt();
         int cols = sc.nextInt();
+        sc.nextLine();
         int[][] a= new int[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -35,9 +36,10 @@ public class Solution {
                 a[i][j] = x;
             }
         }
-        Scanner s = new Scanner(System.in);
-        int rows2 = s.nextInt();
-        int cols2 = s.nextInt();
+        // Scanner s = new Scanner(System.in);
+        int rows2 = sc.nextInt();
+        int cols2 = sc.nextInt();
+        sc.nextLine();
         int[][] b = new int[rows2][cols2];
         for (int i = 0; i < rows2; i++) {
             for (int j = 0; j < cols2; j++) {
