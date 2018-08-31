@@ -13,12 +13,12 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution () {
+    private Solution() {
         /**.
          * { item_description }
          */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      str   The string
@@ -26,7 +26,7 @@ public final class Solution {
      * @return     { description_of_the_return_value }
      */
     public static String reverseString(final String str) {
-        /**
+        /**.
          * { var_description }
          */
         String str1 = "";
@@ -35,18 +35,18 @@ public final class Solution {
         }
         return str1;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        /**
+        /**.
          * { var_description }
          */
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String reverse = reverseString(s);  
+        String reverse = reverseString(s);
         System.out.println(reverse);
     }
     //Write reverseString function
