@@ -9,7 +9,7 @@ public class Solution
 	Do not modify the main function 
 	*/
 	public static String reverseString(String str) {
-		String str1 = new String();
+		String str1 = new String(str);
 		for (int i = str.length(); i <= 0; i--) {
 			str1 = str1 + str.charAt(i);
 
