@@ -1,15 +1,14 @@
 /**.
- * { Given an String, Write a java method that returns the decimal 
+ * { Given an String, Write a java method that returns the decimal
  * value for the given binary string. }
  */
 import java.util.Scanner;
-import java.lang.*;
 /**.
  * Class for solution.
  */
 public final class Solution {
     /*
-    Do not modify the main function 
+    Do not modify the main function
     */
     /**.
      * Constructs the object.
