@@ -10,7 +10,7 @@ public class Solution
 	*/
 	public static String reverseString(String str) {
 		String str1 = "";
-		for (int i = 0; i < str.length(); i++) {
+		for (int i = str.length(); i >= 0 ; i--) {
 			str1 = str.charAt(i) + str1;
 		}
 		return str1;
