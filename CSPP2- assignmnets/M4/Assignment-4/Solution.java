@@ -1,22 +1,21 @@
-
-/**
+/**.
  * { Given an String, Write a java method that returns the decimal 
  * value for the given binary string. }
  */
 import java.util.Scanner;
 import java.lang.*;
-/**
+/**.
  * Class for solution.
  */
-public final class Solution
-{/*
+public final class Solution {
+    /*
     Do not modify the main function 
     */
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution () {
-        /**
+        /**.
          * { item_description }
          */
     }
@@ -32,8 +31,8 @@ public final class Solution
          * { var_description }
          */
         String str1 = "";
-        for (int i = str.length()-1 ; i >= 0 ; i--) {
-            str1 = str1 + str.charAt(i) ;
+        for (int i = str.length()-1; i >= 0; i--) {
+            str1 = str1 + str.charAt(i);
         }
         return str1;
     }
@@ -50,8 +49,6 @@ public final class Solution
         String s = sc.nextLine();
         String reverse = reverseString(s);  
         System.out.println(reverse);
-        
     }
     //Write reverseString function
-
 }
