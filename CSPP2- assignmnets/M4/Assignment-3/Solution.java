@@ -44,10 +44,10 @@ public final class Solution {
          */
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for (int i=0;i<=n;i++) {
+        for (int i = 0 ; i <= n ; i++) {
             String s = sc.nextLine();
             int res = 0;
-            if(!s.isEmpty()) {
+            if (!s.isEmpty()) {
                 res = binaryToDecimal(s);//Write binaryToDecimal function
                 System.out.println(res);
             }
