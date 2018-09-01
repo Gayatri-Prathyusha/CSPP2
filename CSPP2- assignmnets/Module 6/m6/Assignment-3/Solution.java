@@ -30,7 +30,7 @@ final class Solution {
       if (element == oldChar) {
         charArray[i] = newChar;
       }
-      //i += 1;
+      i += 1;
     }
     return charArray;
   }
