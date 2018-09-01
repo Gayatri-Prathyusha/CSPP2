@@ -31,7 +31,7 @@ final class Solution {
    * @return     Matrix of the rounded elements
    */
   static int[][] roundHun(final int[][] a, final int rows, final int columns) {
-    int[][] outputmatrix = new int[rows][columns];
+    int[][] c = new int[rows][columns];
     int maxnum = 0;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
@@ -46,13 +46,13 @@ final class Solution {
         int num = 0;
         for (int k = 0; (k <= maxnum + N_O); k = num * N_U_M) {
           if (Math.abs(a[i][j] - k) < N_O) {
-            outputmatrix[i][j] = k;
+            c[i][j] = k;
         }
           num += 1;
         }
       }
     }
-    return outputmatrix;
+    return c;
   }
   /**
    * Main function.
