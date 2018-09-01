@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Write a java program to find the odd composite numbers
  * between 2 and n where n is given as an input.
  *
- * @author : 
+ * @author :
  */
 public final class Solution {
     /**
@@ -12,7 +12,10 @@ public final class Solution {
     private Solution() {
         //not used
     }
-     private static final int FOUR = 4;
+    /**
+     * { var_description }
+     */
+    private static final int FOUR = 4;
   /**
    * This is to remove magic number error.
   */
