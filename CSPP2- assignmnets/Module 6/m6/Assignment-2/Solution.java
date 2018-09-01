@@ -28,12 +28,10 @@ final class Solution {
      int[][] c = new int[rows][columns];
 	for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++) {
-                if (a[i][j] <= 50) {
-                    c[i][j] = a[i][j] + 100;
-                } else {
+                if (a[i][j] != 0) {
                     c[i][j] = ((a[i][j]/100)) * 100;
-                }
-    }
+
+                }     }
 }
 return c;
 }
