@@ -30,8 +30,9 @@ final class Solution {
                 for (int j = 0; j < columns; j++) {
                 if (a[i][j] != 0) {
                     c[i][j] = ((a[i][j]/100)) * 100;
+                    c[i][j] = a[i][j] + 100;
 
-                }     }
+                }    }
 }
 return c;
 }
