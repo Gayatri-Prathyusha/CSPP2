@@ -15,7 +15,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int FOUR = 4;
+    private static final int N_U_M = 4;
   /**.
    * This is to remove magic number error.
   */
@@ -26,11 +26,11 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-            for (int i = FOUR; i < n; i++) {
+            for (int i = N_U_M; i < n; i++) {
       if (i % 2 != 0) {
         int count = 0;
-        for (int i1 = 1; i1 <= (i / 2 + 1); i1++) {
-          if (i % i1 == 0) {
+        for (int j = 1; j <= (i / 2 + 1); j++) {
+          if (i % j == 0) {
             count += 1;
           }
         }
