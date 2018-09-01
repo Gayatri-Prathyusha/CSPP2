@@ -25,10 +25,9 @@ public final class Solution {
     for(int j = 2; j < i; j++) {
         //System.out.println("second loop: " +i);
         if(i % j == 0 && i % 2 == 1){
-            flag = 1;
-    }
-    if (flag == 1)
         System.out.println(i);
+    }
+
 
 }
             
