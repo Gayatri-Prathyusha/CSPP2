@@ -31,7 +31,7 @@ final class Solution {
                 if (a[i][j] <= 50) {
                     c[i][j] = a[i][j] + 100;
                 } else {
-                    c[i][j] = (a[i][j]/100) * 100;
+                    c[i][j] = ((a[i][j]/100)) * 100;
                 }
     }
 }
