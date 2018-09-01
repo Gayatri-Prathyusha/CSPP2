@@ -32,27 +32,23 @@ final class Solution {
    */
   static int[][] roundHun(final int[][] a, final int rows, final int columns) {
     int[][] outputmatrix = new int[rows][columns];
-    int maxmatrix = 0;
+    int maxnum = 0;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        if (maxmatrix < a[i][j]) {
-          maxmatrix = a[i][j];
+        if (maxnum < a[i][j]) {
+          maxnum = a[i][j];
         }
       }
     }
-    // System.out.println(maxmatrix);
+    // System.out.println(maxnum);
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
         int num = 0;
-        for (int k = 0; (k <= maxmatrix + N_O); k = num * N_U_M) {
-          // System.out.println(k);
-          // System.out.println(Math.abs(a[i][j] - k));
+        for (int k = 0; (k <= maxnum + N_O); k = num * N_U_M) {
           if (Math.abs(a[i][j] - k) < N_O) {
             outputmatrix[i][j] = k;
-            // System.out.println(outputmatrix[i][j]);
-          }
+        }
           num += 1;
-          // System.out.println(k);
         }
       }
     }
