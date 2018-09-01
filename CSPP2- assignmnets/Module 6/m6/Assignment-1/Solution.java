@@ -12,31 +12,31 @@ public final class Solution {
     private Solution() {
         //not used
     }
+     private static final int FOUR = 4;
+  /**
+   * This is to remove magic number error.
+  */
+
     /**
      * Prints the odd composite numbers between 2 and n.
      *
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-        for(int i = 2; i <= n; i++) {
-            int flag = 0;
-
-        //System.out.println("first loop : " +i);
-    for(int j = 2; j < i; j++) {
-        //System.out.println("second loop: " +i);
-        if(i % j == 0 && i % 2 == 1){
-        System.out.println(i);
-    }
-
-
-}
-            
+            for (int i = FOUR; i < n; i++) {
+      if (i % 2 != 0) {
+        int count = 0;
+        for (int i1 = 1; i1 <= (i / 2 + 1); i1++) {
+          if (i % i1 == 0) {
+            count += 1;
+          }
         }
+        if (count >= 2) {
+          System.out.println(i);
+        }
+      }
     }
-
-
-
-    
+  }
     /**
     * main method as driver program.
     * @param args is the parameter for this method
