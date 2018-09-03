@@ -20,9 +20,8 @@ class InputValidator {
          * { item_description }
          */
         this.str = input;
-
     }
-    /**
+    /**.
      * making the value 6 to a variable to remove magic number
      */
     public static final int N_U_M = 6;
@@ -49,6 +48,11 @@ public final class Solution {
      * { item_description }
      */
 
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**.
          * { var_description }
