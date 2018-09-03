@@ -1,24 +1,21 @@
 import java.util.*;
-class InputValidator
-{
-	
+class InputValidator {
 	String str;
-	public InputValidator(String input) {
+	public InputValidator(final String input) {
 		this.str = input;
 
 	}
-	public static boolean validateData(String input) {
+	public static boolean validateData(final String input) {
 		return input.length() >= 6;
 	}
 
 }
-public class Solution
-{
-	public static void main(String args[])
+public class Solution {
+	public static void main(final String args[])
     {
-    	Scanner s=new Scanner(System.in);
-    	String input=s.next();
-    	InputValidator i=new InputValidator(input);    	
+    	Scanner s = new Scanner(System.in);
+    	String input = s.next();
+    	InputValidator i = new InputValidator(input);    	
     	System.out.println(i.validateData(input));
 
     }
