@@ -22,6 +22,7 @@ class InputValidator {
         this.str = input;
 
     }
+    public static final int N_U_M = 6;
     /**.
      * { function_description }
      *
@@ -33,7 +34,7 @@ class InputValidator {
         /**.
          * { item_description }
          */
-        return input.length() >= 6;
+        return input.length() >= N_U_M;
     }
 
 }
@@ -45,7 +46,7 @@ public final class Solution {
      * { item_description }
      */
 
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
