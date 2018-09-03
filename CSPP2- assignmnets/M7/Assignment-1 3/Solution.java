@@ -45,6 +45,14 @@ class InputValidator {
  */
 public final class Solution {
     /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**
+         * { item_description }
+         */
+    }
+    /**.
      * { item_description }
      */
 
