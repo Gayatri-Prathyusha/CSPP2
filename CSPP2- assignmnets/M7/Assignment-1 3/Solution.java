@@ -6,7 +6,10 @@ import java.util.Scanner;
  * Class for input validator.
  */
 class InputValidator {
-    String str;
+    /**.
+     * { var_description }
+     */
+        String str;
     /**.
      * Constructs the object.
      *
