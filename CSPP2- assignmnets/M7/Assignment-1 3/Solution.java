@@ -9,13 +9,13 @@ class InputValidator {
     /**.
      * { var_description }
      */
-        String str;
+    private String str;
     /**.
      * Constructs the object.
      *
      * @param      input  The input
      */
-    public InputValidator(final String input) {
+    protected InputValidator(final String input) {
         /**.
          * { item_description }
          */
