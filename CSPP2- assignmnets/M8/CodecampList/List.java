@@ -67,6 +67,9 @@ public class List {
      * Constructs the object.
      */
     private static final int TEN = 10;
+    /**.
+     * Constructs the object.
+     */
     public List() {
         /**.
          * { item_description }
