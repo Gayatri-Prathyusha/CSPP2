@@ -128,7 +128,7 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        for ( int i = index; i <= size-1; i++)
+        for ( int i = index; i <= size - 1; i++)
         {
             arr[i] = arr[i + 1];
         }
@@ -181,7 +181,7 @@ public class List {
      */
     public String toString() {
         String str = "[";
-        for(int i = 0; i < size-1; i++) {
+        for(int i = 0; i < size; i++) {
             str = str + arr[i] + ",";
         }
         str = str + "]";
