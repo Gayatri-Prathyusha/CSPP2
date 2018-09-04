@@ -132,7 +132,7 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        if(index <= size) {
+        if(index < size) {
         for ( int i = index; i <= size - 1; i++)
         {
             
