@@ -142,9 +142,9 @@ public class List {
         }
         arr[size - 1] = 0;
         size --;
+    } else {
+        System.out.println("Invalid Position Exception");
     }
-    System.out.println("Invalid Position Exception");
-
 
     }
 
