@@ -1,8 +1,12 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**.
+ * List class and the whole operations are done in this class.
+ */
 public class List {
-    //Implement all the methods mentioned to build a ListADT
+    /**.
+     * { var_description }
+     */
     private int size;
     //private int n;
     private int[] arr;
@@ -128,12 +132,19 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
+        if(index <= size) {
         for ( int i = index; i <= size - 1; i++)
         {
-            arr[i] = arr[i + 1];
+            
+             arr[i] = arr[i + 1];   
+            
+            
         }
         arr[size - 1] = 0;
         size --;
+    }
+    System.out.println("Invalid Position Exception");
+
 
     }
 
@@ -149,6 +160,7 @@ public class List {
      * number of items in the list? Would size variable be useful?
      */
     public int get(int index) {
+
         return arr[index];
     }
 
