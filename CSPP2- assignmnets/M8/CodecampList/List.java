@@ -66,6 +66,7 @@ public class List {
     /**.
      * Constructs the object.
      */
+    private static final int TEN = 10;
     public List() {
         /**.
          * { item_description }
@@ -79,7 +80,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        arr = new int[10];
+        arr = new int[TEN];
         size = 0;
     }
     /*
@@ -108,17 +109,21 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
-    public int size() {    
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int size() {
         return size;
     }
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -134,12 +139,16 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
-        if(index < size) {
-        for ( int i = index; i <= size - 1; i++)
-        {
-            arr[i] = arr[i + 1];    
-        }
+        if (index < size) {
+        for (int i = index; i <= size - 1; i++) {
+            arr[i] = arr[i + 1];
+                    }
         arr[size - 1] = 0;
         size--;
     } else {
