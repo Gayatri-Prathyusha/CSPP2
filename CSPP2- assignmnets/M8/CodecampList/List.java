@@ -63,7 +63,6 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
     /**.
      * Constructs the object.
      */
@@ -71,7 +70,6 @@ public class List {
         /**.
          * { item_description }
          */
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
@@ -84,7 +82,6 @@ public class List {
         arr = new int[10];
         size = 0;
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -93,15 +90,20 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
+        /**.
+         * { item_description }
+         */
         arr[size++] = item;
-
-
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -109,11 +111,9 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
-    public int size() {
-        
+    public int size() {    
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -134,7 +134,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if(index < size) {
         for ( int i = index; i <= size - 1; i++)
         {
@@ -162,7 +162,7 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < size) {
            return arr[index];
   
@@ -207,7 +207,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
     for (int element : arr) {
         if (element == item) {
                 return true;
@@ -222,7 +222,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i <= arr.length - 1; i++) {
             if (arr[i] == item) {
                 return i;
@@ -231,7 +231,7 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
