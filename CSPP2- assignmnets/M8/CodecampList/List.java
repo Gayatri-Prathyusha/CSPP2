@@ -170,7 +170,6 @@ public class List {
         return -1;
 
             }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -191,21 +190,31 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str = "[";
         for(int i = 0; i < size - 1; i++) {
             str = str + arr[i] + ",";
         }
-        str = str + arr[size-1] + "]";
-
+        str = str + arr[size - 1] + "]";
         return str;
     } 
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     */
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
     for (int element : arr) {
@@ -214,23 +223,35 @@ public class List {
             }
     }
     return false;
-    
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**.
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
-        for(int i = 0; i <= arr.length - 1; i++) {
+        /**.
+         * { finding the index of the given element}
+         */
+        for (int i = 0; i <= arr.length - 1; i++) {
             if (arr[i] == item) {
                 return i;
             }
         }
         return -1;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -267,12 +288,14 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if((Integer.parseInt(tokens[1])) < l.size()) {
+                if ((Integer.parseInt(tokens[1])) < l.size()) {
                 System.out.println(l.get(Integer.parseInt(tokens[1])));
             }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
