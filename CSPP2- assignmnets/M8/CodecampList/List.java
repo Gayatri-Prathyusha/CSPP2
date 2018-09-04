@@ -149,14 +149,7 @@ public class List {
      * number of items in the list? Would size variable be useful?
      */
     public int get(int index) {
-        // for (int i = 0; i <= arr.length - 1; i++) {
-        //     if(i == index) {
-        //         return arr[i];
-        //     }
-        // }
         return arr[index];
-
-
     }
 
     /*
