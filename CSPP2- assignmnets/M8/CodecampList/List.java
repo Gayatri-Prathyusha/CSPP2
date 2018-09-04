@@ -160,9 +160,13 @@ public class List {
      * number of items in the list? Would size variable be useful?
      */
     public int get(int index) {
+        if (index < size) {
+           return arr[index];
+  
+        }
+        return -1;
 
-        return arr[index];
-    }
+            }
 
     /*
      * What happens when you print an object using println?
