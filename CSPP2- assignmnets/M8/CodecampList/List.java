@@ -181,10 +181,10 @@ public class List {
      */
     public String toString() {
         String str = "[";
-        for(int i = 0; i < size; i++) {
+        for(int i = 0; i < size - 1; i++) {
             str = str + arr[i] + ",";
         }
-        str = str + "]";
+        str = str + arr[size-1] + "]";
 
         return str;
     } 
