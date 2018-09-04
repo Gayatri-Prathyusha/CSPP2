@@ -138,13 +138,10 @@ public class List {
         if(index < size) {
         for ( int i = index; i <= size - 1; i++)
         {
-            
-             arr[i] = arr[i + 1];   
-            
-            
+            arr[i] = arr[i + 1];    
         }
         arr[size - 1] = 0;
-        size --;
+        size--;
     } else {
         System.out.println("Invalid Position Exception");
     }
@@ -159,13 +156,19 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         if (index < size) {
            return arr[index];
-  
         }
         return -1;
 
@@ -179,7 +182,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -197,12 +200,12 @@ public class List {
      */
     public String toString() {
         String str = "[";
-        for(int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             str = str + arr[i] + ",";
         }
         str = str + arr[size - 1] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -225,7 +228,7 @@ public class List {
     return false;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
