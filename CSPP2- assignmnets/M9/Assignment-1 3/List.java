@@ -56,6 +56,7 @@ public class List {
     // variable initialization should be done in the constructor
     private int size;
 
+
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -77,6 +78,10 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
+    }
+        public List(int capacity) {
+        size = 0;
+        list = new int[capacity];
     }
 
     /*
