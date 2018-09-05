@@ -17,15 +17,15 @@ import java.util.Scanner;
  *
  */
 
-/**
+/**.
  * Class for fibonacci.
  */
-public class Fibonacci {
-    /**
+public final class Fibonacci {
+    /**.
      * Constructs the object.
      */
     private Fibonacci() {
-        /**
+        /**.
          * { item_description }
          */
     }
@@ -36,7 +36,7 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      n     { parameter_description }
@@ -44,27 +44,26 @@ public class Fibonacci {
      * @return     { description_of_the_return_value }
      */
     public static List fib(final int n) {
-        /**
+        /**.
          * { var_description }
          */
         List lis = new List(n);
         lis.add(0);
         lis.add(1);
-        
-        for(int i = 2; i < n; i++) {
-            int x = lis.get(i - 1) + lis.get (i - 2);
+        for (int i = 2; i < n; i++) {
+            int x = lis.get(i - 1) + lis.get(i - 2);
             lis.add(x);
         }
 
         return lis;
         }
-	/**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        /**
+        /**.
          * { var_description }
          */
         Scanner s = new Scanner(System.in);
