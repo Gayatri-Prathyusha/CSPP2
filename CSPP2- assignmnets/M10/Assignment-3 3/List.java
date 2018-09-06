@@ -171,7 +171,7 @@ public class List<E> {
      */
     public int indexOf(E item) {
       for (int i = 0; i <= list.length - 1; i++) {
-            if (list[i] == item) {
+            if (list[i].equals(item)) {
                 return i;
             }
         }
