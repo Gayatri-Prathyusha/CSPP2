@@ -90,7 +90,7 @@ public class List<E> {
      * The method returns void (nothing)
      */
     public void remove(int idex) {
-        if(idex > 0 && idex <= size) {
+        if(idex >= 0 && idex < size) {
             for(int i = idex; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
