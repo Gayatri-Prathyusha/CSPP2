@@ -40,9 +40,22 @@ class Student {
         if (!(other instanceof Student)) {
             return false;
         }
+        if (other == this) {
+            return true;
+        }
 
         Student that = (Student) other;
         return this.getName().equals(that.getName());
+    }
+
+    /**
+     * hash code 
+     *
+     * @return     { description_of_the_return_value }
+     */
+    @Override
+    public int hashCode() {
+        return 0;
     }
 
     /**.
