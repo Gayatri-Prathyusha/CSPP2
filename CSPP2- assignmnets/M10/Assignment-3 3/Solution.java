@@ -5,13 +5,15 @@ import java.util.Scanner;
  * Student class for implementing Generic List Adt.
  */
 class Student {
+    /**
+     * initilaizing the string name.
+     */
     private String name;
     /**
      * Constructs the object.
-     *
      * @param      name  The name
      */
-    public Student(final String name) {
+    protected Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
