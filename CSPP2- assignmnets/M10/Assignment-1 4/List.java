@@ -79,6 +79,7 @@ public class List {
         size = 0;
     }
 
+
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -110,8 +111,19 @@ public class List {
      * The method returns void (nothing)
      */
     public void add(int item) {
+        if(size == list.length) {
+            resize();
+        }
+
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
+    }
+        private void resize() {
+        int rsize = size * 2;
+        //int[] arr2 = new int[rsize];
+        list = java.util.Arrays.copyOf(list, rsize);
+        //return list;
+
     }
 
     /*
