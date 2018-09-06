@@ -34,6 +34,7 @@ class Student {
      *
      * @return     { boolean value.}
      */
+    @Override
     public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
