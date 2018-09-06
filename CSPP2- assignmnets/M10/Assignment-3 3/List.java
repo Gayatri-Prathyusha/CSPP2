@@ -172,7 +172,7 @@ public class List<E> {
      * or -1 if this list does not contain the element.
      */
     public int indexOf(E item) {
-      for (int i = 0; i <= list.length; i++) {
+      for (int i = 0; i < list.length; i++) {
             if (list[i].equals(item)) {
                 return i;
             }
