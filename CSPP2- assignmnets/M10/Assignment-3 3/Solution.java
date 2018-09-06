@@ -8,14 +8,14 @@ class Student {
     /**
      * initilaizing the string name.
      */
-    private String name;
+    private String name1;
     /**
      * Constructs the object.
      * @param      name  The name
      */
     protected Student(final String name) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name1 = name;
     }
     /**
      * Gets the name.
@@ -24,7 +24,7 @@ class Student {
     */
     public String getName() {
     //Getter method which returns the value of instance variable
-        return this.name;
+        return this.name1;
     }
 
     /**
@@ -50,7 +50,7 @@ class Student {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.name;
+        return this.name1;
     }
 }
 
