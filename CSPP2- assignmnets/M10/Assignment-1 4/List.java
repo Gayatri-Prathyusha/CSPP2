@@ -27,7 +27,6 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -50,13 +49,13 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-    /*
+    /**.
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -128,7 +127,7 @@ public final class List {
         list[size++] = item;
     }
         /**.
-         * when  the size reaches end of the list then 
+         * when  the size reaches end of the list then
          * we need to resize the list.
          */
         private void resize() {
