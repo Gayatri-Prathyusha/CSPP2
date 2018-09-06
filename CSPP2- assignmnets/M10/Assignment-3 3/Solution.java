@@ -53,8 +53,6 @@ class Student {
         return this.name1;
     }
 }
-
-
 /**.
  * Class for solution.
  */
@@ -64,7 +62,7 @@ public final class Solution {
      */
     private Solution() {
         /**.
-         * { item_description }
+         * private constructor
          */
     }
     /**
@@ -76,7 +74,6 @@ public final class Solution {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
-
         switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
@@ -128,7 +125,6 @@ public final class Solution {
                     }
                 }
             break;
-
             case "I"://This case will be executed for Integer type list
                 List<Integer> listInteger = new List();
                 while (stdin.hasNext()) {
@@ -238,10 +234,8 @@ public final class Solution {
                         break;
                         default:
                         break;
-                    }
-                }
+                    } }
             break;
-
             case "C"://This case will be executed for Character type list
                 List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
@@ -295,10 +289,8 @@ public final class Solution {
                         break;
                         default:
                         break;
-                    }
-                }
+                    } }
             break;
-
             case "D"://This case will be executed for Double type list
                 List<Double> listDouble = new List();
                 while (stdin.hasNext()) {
@@ -353,8 +345,7 @@ public final class Solution {
                         break;
                         default:
                         break;
-                    }
-                }
+                    } }
             break;
             case "O":
             //This case will be executed for Student
