@@ -47,10 +47,8 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
     /**
-     * hash code 
-     *
+     * hash code .
      * @return     { description_of_the_return_value }
      */
     @Override
