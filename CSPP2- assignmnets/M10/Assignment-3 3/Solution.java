@@ -1,14 +1,25 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+ * Student class for implementing Generic List Adt.
+ */
 class Student {
     private String name;
-    
-    public Student(String name) {
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    public Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+    */
     public String getName() {
     //Getter method which returns the value of instance variable
         return this.name;
@@ -45,7 +56,7 @@ class Student {
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -64,7 +75,7 @@ public class Solution {
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
                 while (stdin.hasNext()) {
