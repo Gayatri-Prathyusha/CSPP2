@@ -94,7 +94,7 @@ public class List<E> {
             for(int i = idex; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size - 1] = null;
+            list[size] = null;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
