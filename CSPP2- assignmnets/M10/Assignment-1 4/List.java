@@ -268,51 +268,69 @@ public final class List {
      * or -1 if this list does not contain the element.
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+    /*Inserts all the elements of specified int
     array to the end of list*/
-    public void addAll(final int items[]) {
-        
-        for(int i = 0; i < items.length; i++) {
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
+    public void addAll(final int[] items) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
-        
-    }    
+        }
 }
-
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(final int index,final int item) {
-        if(index < 0) {
+    /**
+     * Adds the  item at a specific location.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(final int index, final int item) {
+        if (index < 0) {
         System.out.println("Negative Index Exception");
         } else {
-        for(int i = size; i > index; i--) {
-            list[i] = list [i - 1];
+        for (int i = size; i > index; i--) {
+            list[i] = list[i - 1];
         }
         list[index] = item;
         size++;
-    } 
     }
-    
+    }
     /* Returns the count of occurances of a given item in the list*/
+    /**
+     * returns the count of the occurances of the given item.
+     *
+     * @param      item  The item
+     *
+     * @return    integer value,How many times the value is occured.
+     */
     public int count(final int item) {
         int coun = 0;
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 coun += 1;
             }
         }
-        return coun;        
+        return coun;
     }
-
-
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -330,11 +348,12 @@ public final class List {
                case "add":
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if (t.length == 1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    if (t.length > 1)
+                    if (t.length > 1){
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
