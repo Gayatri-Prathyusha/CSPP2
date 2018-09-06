@@ -119,7 +119,6 @@ public final class Solution {
                         default:
                         break;
                     } } }
-    
     /**
      * performs the operations for float List ADT.
      *
