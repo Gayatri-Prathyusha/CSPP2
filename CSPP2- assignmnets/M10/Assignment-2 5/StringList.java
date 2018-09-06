@@ -120,6 +120,8 @@ public class StringList implements StringListInterface{
      * The method returns void (nothing)
      */
     public void add(String item) {
+        if(size == list.length)
+            resize();
         list[size++] = item;
        
     }
@@ -134,15 +136,9 @@ public class StringList implements StringListInterface{
     }
    
     public void addAll(String[] items) {
-    {
-        if(size == list.length) {
-            resize();
-        } else {
-        for(int i = 0; i < items.length; i++) {
-            list[size++] = items[i];
-        }
-    }    
-}
+        for(int i=0; i<items.length; i++)
+            add(items[i]);
+    }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -154,7 +150,7 @@ public class StringList implements StringListInterface{
 //             list[size++] = items[i];
 //         }  
 // }
-}
+
     public int size() {
         return size;
     }
