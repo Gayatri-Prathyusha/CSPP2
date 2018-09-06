@@ -282,7 +282,7 @@ public class List {
     public void addAll(int items[])
     {
         if(size == list.length) {
-        System.out.println("No space");
+            resize();
         } else {
         for(int i = 0; i < items.length; i++) {
             list[size++] = items[i];
