@@ -156,7 +156,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
         for (E element : list) {
-            if (element.equals(item)) {
+            if (item.equals(element)) {
                 return true;
             }
     }
