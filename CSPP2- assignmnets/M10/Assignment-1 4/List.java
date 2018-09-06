@@ -258,6 +258,13 @@ public final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * checking whether the element is there.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
