@@ -46,7 +46,7 @@ public class List<E> {
         list[size++] = item;
     }
     
-    public void resize() {
+    private void resize() {
         int rsize = size * 2;
         list = java.util.Arrays.copyOf(list, rsize);
     }
@@ -94,6 +94,7 @@ public class List<E> {
             for(int i = idex; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
+            list[idex] = null;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
@@ -171,7 +172,7 @@ public class List<E> {
      */
     public int indexOf(E item) {
       for (int i = 0; i <= list.length - 1; i++) {
-            if (item.equals(list[i])) {
+            if (list[i].equals(item)) {
                 return i;
             }
         }
