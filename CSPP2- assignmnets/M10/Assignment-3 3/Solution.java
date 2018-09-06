@@ -77,18 +77,8 @@ public final class Solution {
          * private constructor
          */
     }
-    /**
-     * Main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
-        String objectType = stdin.nextLine();
-        switch (objectType) {
-            case "S"://This case will be executed for String type list
-                List<String> listString = new List();
+    public static void performString(final Scanner stdin) {
+        List<String> listString = new List();
                 while (stdin.hasNext()) {
                     String line = stdin.nextLine();
                     String[] tokens = line.split(" ");
@@ -123,7 +113,108 @@ public final class Solution {
                         break;
                         default:
                         break;
+                    } } }
+    public static void performFloat(final Scanner stdin) {
+        List<Float> listFloat = new List();
+                while (stdin.hasNext()) {
+                    String line = stdin.nextLine();
+                    String[] tokens = line.split(" ");
+                    switch (tokens[0]) {
+                        case "add":
+                            listFloat.add(Float.parseFloat(tokens[1]));
+                        break;
+                        case "addAll":
+                        if (tokens.length == 2) {
+                        String[] t1 = tokens[1].split(",");
+                        Float[] temp = new Float[t1.length];
+                        for (int i = 0; i < t1.length; i++) {
+                            temp[i] = Float.parseFloat(t1[i]);
+                        }
+                        listFloat.addAll(temp);
+                        }
+                        break;
+                        case "size":
+                        System.out.println(listFloat.size());
+                        break;
+                        case "print":
+                        System.out.println(listFloat);
+                        break;
+                        case "remove":
+                        listFloat.remove(Integer.parseInt(tokens[1]));
+                        break;
+                        case "indexOf":
+                        System.out.println(listFloat.indexOf(
+                            Float.parseFloat(tokens[1])));
+                        break;
+                        case "get":
+                        System.out.println(listFloat.get(
+                            Integer.parseInt(tokens[1])));
+                        break;
+                        case "contains":
+                        System.out.println(listFloat.contains(
+                            Float.parseFloat(tokens[1])));
+                        break;
+                        default:
+                        break;
                     } }
+                }
+
+    public static void performCharacters(final Scanner stdin) {
+        List<Character> listCharacter = new List();
+                while (stdin.hasNext()) {
+                    String line = stdin.nextLine();
+                    String[] tokens = line.split(" ");
+                    switch (tokens[0]) {
+                        case "add":
+                            listCharacter.add(tokens[1].charAt(0));
+                        break;
+                        case "addAll":
+                        if (tokens.length == 2) {
+                        String[] t1 = tokens[1].split(",");
+                        Character[] temp = new Character[t1.length];
+                        for (int i = 0; i < t1.length; i++) {
+                            temp[i] = t1[i].charAt(0);
+                        }
+                        listCharacter.addAll(temp);
+                        }
+                        break;
+                        case "size":
+                        System.out.println(listCharacter.size());
+                        break;
+                        case "print":
+                        System.out.println(listCharacter);
+                        break;
+                        case "remove":
+                        listCharacter.remove(Integer.parseInt(tokens[1]));
+                        break;
+                        case "indexOf":
+                        System.out.println(listCharacter.indexOf(
+                            tokens[1].charAt(0)));
+                        break;
+                        case "get":
+                        System.out.println(listCharacter.get(
+                            Integer.parseInt(tokens[1])));
+                        break;
+                        case "contains":
+                        System.out.println(listCharacter.contains(
+                            tokens[1].charAt(0)));
+                        break;
+                        default:
+                        break;
+                    } }
+    }
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        // create an object of the list to invoke methods on it
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        String objectType = stdin.nextLine();
+        switch (objectType) {
+            case "S"://This case will be executed for String type list
+                performString(stdin);
             break;
             case "I":
                 List<Integer> listInteger = new List();
@@ -170,92 +261,10 @@ public final class Solution {
                     } }
             break;
             case "F":
-                List<Float> listFloat = new List();
-                while (stdin.hasNext()) {
-                    String line = stdin.nextLine();
-                    String[] tokens = line.split(" ");
-                    switch (tokens[0]) {
-                        case "add":
-                            listFloat.add(Float.parseFloat(tokens[1]));
-                        break;
-                        case "addAll":
-                        if (tokens.length == 2) {
-                        String[] t1 = tokens[1].split(",");
-                        Float[] temp = new Float[t1.length];
-                        for (int i = 0; i < t1.length; i++) {
-                            temp[i] = Float.parseFloat(t1[i]);
-                        }
-                        listFloat.addAll(temp);
-                        }
-                        break;
-                        case "size":
-                        System.out.println(listFloat.size());
-                        break;
-                        case "print":
-                        System.out.println(listFloat);
-                        break;
-                        case "remove":
-                        listFloat.remove(Integer.parseInt(tokens[1]));
-                        break;
-                        case "indexOf":
-                        System.out.println(listFloat.indexOf(
-                            Float.parseFloat(tokens[1])));
-                        break;
-                        case "get":
-                        System.out.println(listFloat.get(
-                            Integer.parseInt(tokens[1])));
-                        break;
-                        case "contains":
-                        System.out.println(listFloat.contains(
-                            Float.parseFloat(tokens[1])));
-                        break;
-                        default:
-                        break;
-                    } }
+                performFloat(stdin);
             break;
             case "C"://This case will be executed for Character type list
-                List<Character> listCharacter = new List();
-                while (stdin.hasNext()) {
-                    String line = stdin.nextLine();
-                    String[] tokens = line.split(" ");
-                    switch (tokens[0]) {
-                        case "add":
-                            listCharacter.add(tokens[1].charAt(0));
-                        break;
-                        case "addAll":
-                        if (tokens.length == 2) {
-                        String[] t1 = tokens[1].split(",");
-                        Character[] temp = new Character[t1.length];
-                        for (int i = 0; i < t1.length; i++) {
-                            temp[i] = t1[i].charAt(0);
-                        }
-                        listCharacter.addAll(temp);
-                        }
-                        break;
-                        case "size":
-                        System.out.println(listCharacter.size());
-                        break;
-                        case "print":
-                        System.out.println(listCharacter);
-                        break;
-                        case "remove":
-                        listCharacter.remove(Integer.parseInt(tokens[1]));
-                        break;
-                        case "indexOf":
-                        System.out.println(listCharacter.indexOf(
-                            tokens[1].charAt(0)));
-                        break;
-                        case "get":
-                        System.out.println(listCharacter.get(
-                            Integer.parseInt(tokens[1])));
-                        break;
-                        case "contains":
-                        System.out.println(listCharacter.contains(
-                            tokens[1].charAt(0)));
-                        break;
-                        default:
-                        break;
-                    } }
+                performCharacters(stdin);
             break;
             case "D"://This case will be executed for Double type list
                 List<Double> listDouble = new List();
@@ -318,7 +327,7 @@ public final class Solution {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
-                    }
+                        }
                         break;
                         case "size":
                         System.out.println(listStudent.size());
