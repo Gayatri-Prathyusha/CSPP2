@@ -253,11 +253,8 @@ public class StringList implements StringListInterface {
                 return true;
             }
     }
-    return false;
-
-        
+    return false;   
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
@@ -271,5 +268,20 @@ public class StringList implements StringListInterface {
         }
         return -1;
     }
-        
-    }
+    // public void add(int index, E item) {
+    //     for (int i= size; i > index; i--) {
+    //         list[i] = list[i - 1];
+    //     }
+    //     list[index] = item;
+    //     size ++;    
+    // }
+    // public int count(E item) {
+    //     int count = 0;
+    //     for(E element : list) {
+    //         if (element.equals(item)) {
+    //             count += 1;
+    //         }
+    //     }
+    //     return count;
+    // } 
+}
