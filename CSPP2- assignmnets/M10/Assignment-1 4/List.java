@@ -243,6 +243,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
+        if(size == 0) {
+            return "[]";
+        } else {
         String str = "[";
         for (int i = 0; i < size - 1; i++) {
             str = str + arr[i] + ",";
@@ -250,6 +253,7 @@ public class List {
         str = str + arr[size - 1] + "]";
         return str;
     }
+}
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -310,7 +314,7 @@ public class List {
             // read the line
             String line = stdin.nextLine();
             // split the line using space
-            String[] tokens = line.split(",");
+            String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
@@ -343,7 +347,7 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                //String[] arr2 = tokens  
+                //String[] arr2 = tokens 
 
                 int[] arr2 = new int[tokens.length - 1];
                 for(int i = 0; i < tokens.length - 1; i++) {
