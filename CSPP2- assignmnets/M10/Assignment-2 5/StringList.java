@@ -12,7 +12,7 @@ interface StringListInterface
 }
 //Write a StringList class which implements StringListInterface 
 
-public class StringList implements StringListInterface{
+public class StringList implements StringListInterface {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -136,7 +136,7 @@ public class StringList implements StringListInterface{
     }
    
     public void addAll(String[] items) {
-        for(int i=0; i<items.length; i++)
+        for(int i = 0; i < items.length; i++)
             add(items[i]);
     }
     /*
