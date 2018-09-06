@@ -77,6 +77,11 @@ public final class Solution {
          * private constructor
          */
     }
+    /**
+     * performs the operations for String list ADT.
+     *
+     * @param      stdin  The stdin
+     */
     public static void performString(final Scanner stdin) {
         List<String> listString = new List();
                 while (stdin.hasNext()) {
@@ -114,6 +119,12 @@ public final class Solution {
                         default:
                         break;
                     } } }
+    
+    /**
+     * performs the operations for float List ADT.
+     *
+     * @param      stdin  The stdin
+     */
     public static void performFloat(final Scanner stdin) {
         List<Float> listFloat = new List();
                 while (stdin.hasNext()) {
@@ -158,7 +169,11 @@ public final class Solution {
                         break;
                     } }
                 }
-
+    /**
+     * performs the operations on the characters list ADT.
+     *
+     * @param      stdin  The stdin
+     */
     public static void performCharacters(final Scanner stdin) {
         List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
