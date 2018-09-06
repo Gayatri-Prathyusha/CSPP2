@@ -379,7 +379,7 @@ public final class Solution {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
-                        }
+                    }
                         break;
                         case "size":
                         // invoke size method and print the list size
@@ -412,12 +412,8 @@ public final class Solution {
                         break;
                         default:
                         break;
-                    }
-                }
+                    } }
                 break;
             default:
             break;
-        }
-    }
-}
-
+        } } }
