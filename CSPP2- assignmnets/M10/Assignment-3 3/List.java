@@ -94,10 +94,11 @@ public class List<E> {
             for(int i = idex; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size] = null;
+            list[size - 1] = null;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
+
         }
     }
     /*
@@ -171,7 +172,7 @@ public class List<E> {
      * or -1 if this list does not contain the element.
      */
     public int indexOf(E item) {
-      for (int i = 0; i <= list.length - 1; i++) {
+      for (int i = 0; i <= list.length; i++) {
             if (list[i].equals(item)) {
                 return i;
             }
