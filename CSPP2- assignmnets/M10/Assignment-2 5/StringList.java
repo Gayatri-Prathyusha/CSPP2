@@ -135,7 +135,7 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
     {
-        if(size == list.length) {
+        if(size < list.length) {
             resize();
         } else {
         for(int i = 0; i < items.length; i++) {
