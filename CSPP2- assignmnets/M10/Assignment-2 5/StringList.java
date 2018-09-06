@@ -125,10 +125,24 @@ public class StringList implements StringListInterface{
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
+    private void resize() {
+        int rsize = size * 2;
+        //int[] arr2 = new int[rsize];
+        list = java.util.Arrays.copyOf(list, rsize);
+        //return list;
+
+    }
    
     public void addAll(String[] items) {
-		
-	
+    {
+        if(size == list.length) {
+            resize();
+        } else {
+        for(int i = 0; i < items.length; i++) {
+            list[size++] = items[i];
+        }
+    }    
+}
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -136,12 +150,11 @@ public class StringList implements StringListInterface{
      * 
      * The method returns an int. Empty list should return 0.
      */ 
-        for(int i = 0; i < items.length; i++) {
-            list[size++] = items[i];
-        }
-       
+//         for(int i = 0; i < items.length; i++) {
+//             list[size++] = items[i];
+//         }  
+// }
 }
-
     public int size() {
         return size;
     }
