@@ -157,7 +157,7 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-        return indexOf(item) != -1;
+        return indexOf(item) >= 0;
         
     //     for (E element : list) {
     //         if (item.equals(element)) {
@@ -173,11 +173,10 @@ public class List<E> {
      */
     public int indexOf(E item) {
       for (int i = 0; i < list.length; i++) {
-            if (list[i].equals(item)) {
+            if (item.equals(list[i])) {
                 return i;
             }
         }
         return -1;
     }
-    
 }
