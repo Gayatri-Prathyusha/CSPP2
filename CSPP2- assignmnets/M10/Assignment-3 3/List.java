@@ -155,12 +155,14 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-        for (E element : list) {
-            if (item.equals(element)) {
-                return true;
-            }
-    }
-    return false;
+        return indexOf(item) != -1;
+        
+    //     for (E element : list) {
+    //         if (item.equals(element)) {
+    //             return true;
+    //         }
+    // }
+    // return false;
     }
     /*
      * Returns the index of the first occurrence 
