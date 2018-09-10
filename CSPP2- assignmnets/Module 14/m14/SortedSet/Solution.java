@@ -5,16 +5,16 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
     /**
      * Constructs the object.
      */
-    public Solution() {
-        /**
+    private Solution() {
+        /**.
          * { item_description }
          */
     }
-        /**
+        /**.
          * { function_description }
          *
          * @param      s     { parameter_description }
