@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
@@ -14,6 +14,13 @@ public class Solution {
          * { item_description }
          */
     }
+        /**
+         * { function_description }
+         *
+         * @param      s     { parameter_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
         public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
