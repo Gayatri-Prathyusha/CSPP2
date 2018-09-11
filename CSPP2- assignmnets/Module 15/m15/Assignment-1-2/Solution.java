@@ -98,7 +98,7 @@ class List {
      *
      * @param      capacity  The capacity
      */
-    public List(final int capacity) {
+    protected List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -156,12 +156,14 @@ class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    /**.
-     * { function_description }
-     *
-     * @param      index  The index
-     */
-    public void remove(final int index) throws IndexOutOfBoundsException {
+/**
+ * { function_description }
+ *
+ * @param      index                      The index
+ *
+ * @throws     IndexOutOfBoundsException  { exception_description }
+ */
+public void remove(final int index) throws IndexOutOfBoundsException {
         try {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
@@ -170,10 +172,8 @@ class List {
             size--;
         } else {
             throw new IndexOutOfBoundsException();
-            
         }
-    }
-        catch (IndexOutOfBoundsException e) {
+    } catch (IndexOutOfBoundsException e) {
             System.out.println("Invalid Position Exception");
         }
     }
@@ -355,7 +355,7 @@ class List {
 
         try {
         if (start >= 0 && start < size && end <= size
-            && end >= 0 && start <= end ) {
+            && end >= 0 && start <= end) {
         List sublist = new List(end - start);
         for (int i = start; i < end; i++) {
             sublist.add(this.get(i));
@@ -398,11 +398,18 @@ class List {
         list = new int[X];
     }
 }
-public class Solution {
+/**
+ * { item_description }
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
-
+        /**
+         * { item_description }
+         */
     }
-    
     /**.
      * { function_description }
      *
