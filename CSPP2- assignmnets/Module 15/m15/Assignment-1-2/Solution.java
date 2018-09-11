@@ -156,7 +156,7 @@ class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-/**
+/**.
  * { function_description }
  *
  * @param      index                      The index
@@ -398,7 +398,7 @@ public void remove(final int index) throws IndexOutOfBoundsException {
         list = new int[X];
     }
 }
-/**
+/**.
  * { item_description }
  */
 public final class Solution {
@@ -406,7 +406,7 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        /**
+        /**.
          * { item_description }
          */
     }
