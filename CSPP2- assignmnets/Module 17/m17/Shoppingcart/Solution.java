@@ -2,7 +2,10 @@
  * { item_description }
  */
 import java.util.Scanner;
-public class Solution {
+/**.
+ * Class for solution.
+ */
+public final class Solution {
     /**.
      * Constructs the object.
      */
@@ -20,12 +23,12 @@ public class Solution {
         ShoppingCart sc = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
         int testCases = Integer.parseInt(scan.nextLine());
-        for (int i=0; i < testCases; i++) {
+        for (int i = 0; i < testCases; i++) {
             String line = scan.nextLine();
             String[] tokens = line.split(" ");
             switch (tokens[0]) {
                 case "Item":
-                String[] c1 = tokens[1]. split(",");
+                String[] c1 = tokens[1].split(",");
                 sc.addToCatalog(new Item(c1[0],
                     Integer.parseInt(c1[1]), Float.parseFloat(c1[2])));
                 //sc.addToCatalog(it);
