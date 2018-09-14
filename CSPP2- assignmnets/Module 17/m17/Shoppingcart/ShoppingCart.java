@@ -11,7 +11,7 @@ class Item {
 
     }
 
-    Item(final String name, final int qnt, final float price) {
+    Item(String name, int qnt, float price) {
         this.pname = name;
         this.quantity = qnt;
         this.unitprice = price;
@@ -25,14 +25,14 @@ class Item {
         return quantity;
     }
 
-    public void setquantity(final int qnt) {
+    public void setquantity(int qnt) {
         this.quantity = qnt;
     }
 
     public float getunitPrice() {
         return unitprice;
     }
-    public void setunitPrice(final float price) {
+    public void setunitPrice(float price) {
         this.unitprice = price;
     }
 
@@ -41,7 +41,7 @@ class Item {
     }
 
     @Override
-    public boolean equals(final Object item) {
+    public boolean equals(Object item) {
         Item myItem = (Item)item;
         return this.getpname().equals(myItem.getpname());
     }
@@ -60,14 +60,14 @@ class ShoppingCart {
     }
 
 
-    public void addToCatalog(final Item item) {
+    public void addToCatalog(Item item) {
         int index = catalog.indexOf(item);
         if (index == -1) {
             catalog.add(item);
         }
     }
 
-    public void addToCart(final Item item) {
+    public void addToCart(Item item) {
         int index = catalog.indexOf(item);
         Item catalogItem = catalog.get(index);
         index = cart.indexOf(item);
@@ -85,7 +85,7 @@ class ShoppingCart {
         }
     }
         
-    public void removeFromCart(final Item item) {
+    public void removeFromCart(Item item) {
         int index = catalog.indexOf(item);
         Item catalogItem = catalog.get(index);
         
@@ -142,7 +142,7 @@ class ShoppingCart {
         return payableAmount;
     }
 
-    public void applyCoupon(final String coupon) {
+    public void applyCoupon(String coupon) {
         if (isCouponApplied == false) {
             if (coupon.equals("IND10")) {
             couponCode = 0.1f;
