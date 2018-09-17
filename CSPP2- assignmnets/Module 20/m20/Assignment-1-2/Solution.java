@@ -134,7 +134,7 @@ class Question {
         for(int i=0;i<choices.length-1;i++) {
             s+= choices[i] + "\t";
         }
-        s += choices[choices.length-1];
+        s += choices[choices.length-1] + "\n";
         return s;
     }
 }
@@ -226,11 +226,7 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                try {
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                } catch (Exception ex) {
-                    System.out.println(ex.getMessage());
-                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -258,38 +254,35 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q)throws Exception {
+        final Quiz quiz, int q) {
         if(q == 0) {
             System.out.println("Quiz does not have questions");
         }
-
-        while(q > 0) {
-
+        for (int i = 0; i < q; i++) {
             String ques = scan.nextLine();
             String[] quesToken = ques.split(":");
             String[] choice = quesToken[1].split(",");
             //System.out.println(quesToken[0]);
             if(quesToken[0].equals("") || choice.length == 0 || quesToken[2].equals("") || quesToken[3].equals("") || quesToken.length < 5) {
-                throw new Exception("Error! Malformed question");
+                System.out.println("Error! Malformed question");
             }
-                if(choice.length < 2) {
-                    throw new Exception(quesToken[0] + "does not have enough answer choices"); 
-                }
-            
-                    if(Integer.parseInt(quesToken[2]) < 1 || Integer.parseInt(quesToken[2]) < choice.length) {
-                        throw new Exception("Error! Correct answer choice number is out of range for " + quesToken[0]); }
-            
-                        if(Integer.parseInt(quesToken[3]) <= 0) {
-                            throw new Exception("Invalid max marks for " + quesToken[0]); }
-                            if (Integer.parseInt(quesToken[4]) > 0) {
-                                throw new Exception("Invalid penalty for " + quesToken[0]); 
-                            }  else {
+            if(choice.length < 2) {
+                System.out.println(quesToken[0] + "does not have enough answer choices");
+            }
+            if(Integer.parseInt(quesToken[2]) < 1 || Integer.parseInt(quesToken[2]) > choice.length) {
+                System.out.println("Error! Correct answer choice number is out of range for " + quesToken[0]);
+            }
+            if(Integer.parseInt(quesToken[3]) <= 0) {
+                System.out.println("Invalid max marks for " + quesToken[0]);
+            }
+            if (Integer.parseInt(quesToken[4]) > 0) {
+                System.out.println("Invalid penalty for " + quesToken[0]);
+            } else {
         Question qes = new Question(quesToken[0], quesToken[1].split(",") , Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
+        } 
     }
-    q--;
-        }
         System.out.println(q + " are added to the quiz");
         return;
     }
@@ -302,7 +295,9 @@ public final class Solution {
      */
     public static void startQuiz(final Scanner scan,
         final Quiz quiz, final int q) {
-
+        if (quiz.size() <= 0) {
+            return;
+        }
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
@@ -319,6 +314,9 @@ public final class Solution {
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
+        if (quiz.size() <= 0) {
+            return;
+        }
         int totalscore = 0;
         String s = "";
         for(int i = 0; i < quiz.size(); i++) {
