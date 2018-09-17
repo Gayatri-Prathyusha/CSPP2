@@ -244,10 +244,9 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                
-                try{
+                try {
                     loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                } catch (Exception ex){
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 break;
@@ -275,6 +274,7 @@ public final class Solution {
      * @param      quiz       The quiz
      * @param      q          The question count
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q)throws Exception {
