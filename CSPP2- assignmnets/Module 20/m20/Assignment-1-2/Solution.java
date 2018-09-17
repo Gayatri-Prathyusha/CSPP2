@@ -44,6 +44,12 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
+        questiontext = question1;
+        choices = choices1;
+        correctAnswer = correctAnswer1;
+        maxMarks = maxMarks1;
+        penalty = penalty1;
+
 
     }
     /**
@@ -54,7 +60,8 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        if(choice == getCorrectAnswer()) {
+        int cho = Integer.parseInt(choice);
+        if(cho == correctAnswer) {
             return true;
         }
         return false;
@@ -64,8 +71,8 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
-         return "" + correctAnswer;
+    public int getCorrectAnswer() {
+         return correctAnswer;
     }
     /**
      * Gets the question text.
@@ -123,8 +130,14 @@ class Question {
      */
     public String toString() {
         String s = "";
-        s = questiontext + " " + "(" + maxMarks + ")" + "\n"
-         + choices[0] + "\t" + choices[1] + "\t" + choices[2] + "\t" + choices[3] ;
+        //System.out.println(questiontext);
+        s = questiontext + " " + "(" + maxMarks + ")" + "\n";
+        for(int i=0;i<choices.length-1;i++) {
+            s+= choices[i] + "\t";
+          //+ choices[0] + "\t" + choices[1] + "\t" + choices[2] + "\t" + choices[3] + "\n";
+
+        }
+        s += choices[choices.length-1];
         return s;
     }
 }
@@ -161,7 +174,6 @@ class Quiz {
     }
     public void addQuestion(final Question q) {
         questions[size++] = q;
-        return;
 
     }
     /**
@@ -246,13 +258,16 @@ public final class Solution {
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) {
+
         for(int i = 0; i < q; i++) {
             String ques = scan.nextLine();
             String[] quesToken = ques.split(":");
+            //System.out.println(quesToken[0]);
         Question qes = new Question(quesToken[0], quesToken[1].split(","), Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
         }
+        System.out.println(q + " are added to the quiz");
         return;
     }
     /**
@@ -270,8 +285,9 @@ public final class Solution {
         // store the user respone in the question object
         for(int i = 0; i < q; i++) {
             System.out.println(quiz.getQuestion(i));
-            // String userresponse = scan.next();
-            // quiz.getQuestion(i).setResponse(userresponse);
+            String userresponse = scan.nextLine();
+            //String[] userchoice = userresponse.split(" ");
+            quiz.getQuestion(i).setResponse(userresponse);
         } 
     }
     /**
@@ -280,14 +296,27 @@ public final class Solution {
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
+        int totalscore = 0;
+        String s = "";
         for(int i = 0; i < quiz.size(); i++) {
-        if(quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse()) == true) {
-        String s = quiz.getQuestion(i).getQuestionText() + "\n" + " Correct Answer! - Marks Awarded: "
-         + quiz.getQuestion(i).getMaxMarks();            
+        //System.out.println(quiz.getQuestion(i).getResponse());
+        Question q1 = quiz.getQuestion(i);
+        String[] choic = q1.getChoice();
+
+        if(q1.getResponse().equals(choic[q1.getCorrectAnswer() - 1])) {
+        s = q1.getQuestionText() + "\n" + " Correct Answer! - Marks Awarded: "
+         + q1.getMaxMarks();
+         totalscore += q1.getMaxMarks(); 
+
         } else {
-        String s = quiz.getQuestion(i).getQuestionText() + "\n" + " Wrong Answer! - Penalty: " 
-         + quiz.getQuestion(i).getPenalty();           
+        s = q1.getQuestionText() + "\n" + " Wrong Answer! - Penalty: " 
+         + q1.getPenalty(); 
+         totalscore += q1.getPenalty(); 
+
         }
+        System.out.println(s);
+        
     }
+    System.out.println("Total Score: " +totalscore);
     }
 }
