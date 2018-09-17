@@ -226,7 +226,11 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
+                try {
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                } catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -254,7 +258,7 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q) {
+        final Quiz quiz, int q)throws Exception {
         if(q == 0) {
             System.out.println("Quiz does not have questions");
         }
@@ -266,20 +270,20 @@ public final class Solution {
             String[] choice = quesToken[1].split(",");
             //System.out.println(quesToken[0]);
             if(quesToken[0].equals("") || choice.length == 0 || quesToken[2].equals("") || quesToken[3].equals("") || quesToken.length < 5) {
-                System.out.println("Error! Malformed question");
+                throw new Exception("Error! Malformed question");
             }
-            if(choice.length < 2) {
-                System.out.println(quesToken[0] + "does not have enough answer choices");
-            }
-            if(Integer.parseInt(quesToken[2]) < 1 || Integer.parseInt(quesToken[2]) < choice.length) {
-                System.out.println("Error! Correct answer choice number is out of range for " + quesToken[0]);
-            }
-            if(Integer.parseInt(quesToken[3]) <= 0) {
-                System.out.println("Invalid max marks for " + quesToken[0]);
-            }
-            if (Integer.parseInt(quesToken[4]) > 0) {
-                System.out.println("Invalid penalty for " + quesToken[0]);
-            } else {
+                if(choice.length < 2) {
+                    throw new Exception(quesToken[0] + "does not have enough answer choices"); 
+                }
+            
+                    if(Integer.parseInt(quesToken[2]) < 1 || Integer.parseInt(quesToken[2]) < choice.length) {
+                        throw new Exception("Error! Correct answer choice number is out of range for " + quesToken[0]); }
+            
+                        if(Integer.parseInt(quesToken[3]) <= 0) {
+                            throw new Exception("Invalid max marks for " + quesToken[0]); }
+                            if (Integer.parseInt(quesToken[4]) > 0) {
+                                throw new Exception("Invalid penalty for " + quesToken[0]); 
+                            }  else {
         Question qes = new Question(quesToken[0], quesToken[1].split(",") , Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
