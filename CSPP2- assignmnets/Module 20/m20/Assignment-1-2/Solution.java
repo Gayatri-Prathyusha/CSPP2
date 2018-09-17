@@ -202,15 +202,15 @@ public final class Solution {
     /**
      * NUMBER TO ELIMINATE MAGIC NUMBER.
      */
-    private final int THREE = 3;
+    private static final int THREE = 3;
     /**
      * NUMBER TO ELIMINATE MAGIC NUMBER.
      */
-    private final int FOUR = 4;
+    private static final int FOUR = 4;
     /**
      * NUMBER TO ELIMINATE MAGIC NUMBER.
      */
-    private final int FIVE = 5; 
+    private static final int FIVE = 5; 
     /**
     * Constructs the object.
     */
@@ -278,7 +278,7 @@ public final class Solution {
             String[] choice = quesToken[1].split(",");
             //System.out.println(quesToken[0]);
             if(quesToken[0].equals("") || choice.length == 0
-                || quesToken[2].equals("") || quesToken[3].equals("") || quesToken.length < 5) {
+                || quesToken[2].equals("") || quesToken[THREE].equals("") || quesToken.length < FIVE) {
                 System.out.println("Error! Malformed question");
                 return;
             }
@@ -295,18 +295,18 @@ public final class Solution {
                 return;
 
             }
-            if(Integer.parseInt(quesToken[3]) <= 0) {
+            if(Integer.parseInt(quesToken[THREE]) <= 0) {
                 System.out.println("Invalid max marks for " + quesToken[0]);
                 return;
 
             }
-            if (Integer.parseInt(quesToken[4]) > 0) {
+            if (Integer.parseInt(quesToken[FOUR]) > 0) {
                 System.out.println("Invalid penalty for " + quesToken[0]);
                 return;
             } else {
         Question qes = new Question(quesToken[0], quesToken[1].split(",")
             , Integer.parseInt(quesToken[2]),
-        Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
+        Integer.parseInt(quesToken[THREE]), Integer.parseInt(quesToken[FOUR]));
         quiz.addQuestion(qes);
         }
     }
