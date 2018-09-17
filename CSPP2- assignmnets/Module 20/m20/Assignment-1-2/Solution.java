@@ -130,12 +130,9 @@ class Question {
      */
     public String toString() {
         String s = "";
-        //System.out.println(questiontext);
-        s = questiontext + " " + "(" + maxMarks + ")" + "\n";
+        s = questiontext + "(" + maxMarks + ")" + "\n";
         for(int i=0;i<choices.length-1;i++) {
             s+= choices[i] + "\t";
-          //+ choices[0] + "\t" + choices[1] + "\t" + choices[2] + "\t" + choices[3] + "\n";
-
         }
         s += choices[choices.length-1];
         return s;
