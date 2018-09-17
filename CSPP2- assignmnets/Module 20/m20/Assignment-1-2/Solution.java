@@ -283,8 +283,8 @@ public final class Solution {
         quiz.addQuestion(qes);
         } 
     }
-        System.out.println(q + " are added to the quiz");
-        return;
+    System.out.println(q + " are added to the quiz");
+    return;
     }
     /**
      * Starts a quiz.
