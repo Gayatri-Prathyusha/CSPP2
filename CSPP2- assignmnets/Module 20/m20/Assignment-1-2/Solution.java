@@ -264,17 +264,21 @@ public final class Solution {
             String[] quesToken = ques.split(":");
             String[] choice = quesToken[1].split(",");
             //System.out.println(quesToken[0]);
-            if(quesToken[0].equals("") || choice.length == 0 || quesToken[2].equals("") || quesToken[3].equals("") || quesToken.length < 5) {
+            if(quesToken[0].equals("") || choice.length == 0
+                || quesToken[2].equals("") || quesToken[3].equals("") || quesToken.length < 5) {
                 System.out.println("Error! Malformed question");
                 return;
             }
             if(choice.length < 2) {
-                System.out.println(quesToken[0] + " does not have enough answer choices");
+                System.out.println(quesToken[0]
+                    + " does not have enough answer choices");
                 return;
 
             }
-            if(Integer.parseInt(quesToken[2]) < 1 || Integer.parseInt(quesToken[2]) > choice.length) {
-                System.out.println("Error! Correct answer choice number is out of range for " + quesToken[0]);
+            if(Integer.parseInt(quesToken[2]) < 1
+                || Integer.parseInt(quesToken[2]) > choice.length) {
+                System.out.println("Error! Correct answer choice number is out of range for "
+                    + quesToken[0]);
                 return;
 
             }
@@ -287,7 +291,8 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + quesToken[0]);
                 return;
             } else {
-        Question qes = new Question(quesToken[0], quesToken[1].split(",") , Integer.parseInt(quesToken[2]),
+        Question qes = new Question(quesToken[0], quesToken[1].split(",")
+            , Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
         } 
