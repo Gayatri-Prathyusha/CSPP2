@@ -61,7 +61,7 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         int cho = Integer.parseInt(choice);
-        if(cho == correctAnswer) {
+        if (cho == correctAnswer) {
             return true;
         }
         return false;
@@ -131,7 +131,7 @@ class Question {
     public String toString() {
         String s = "";
         s = questiontext + "(" + maxMarks + ")" + "\n";
-        for(int i = 0; i < choices.length - 1; i++) {
+        for (int i = 0; i < choices.length - 1; i++) {
             s += choices[i] + "\t";
         }
         s += choices[choices.length - 1] + "\n";
@@ -162,7 +162,7 @@ class Quiz {
         questions = new Question[onehundred];
     }
     /**
-     * returns size
+     * function to get the size.
      *
      * @return     size.
      */
@@ -272,7 +272,7 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz,final int q) {
+        final Quiz quiz, final int q) {
         if (q == 0) {
             System.out.println("Quiz does not have questions");
             return;
