@@ -131,10 +131,10 @@ class Question {
     public String toString() {
         String s = "";
         s = questiontext + "(" + maxMarks + ")" + "\n";
-        for(int i=0;i<choices.length-1;i++) {
-            s+= choices[i] + "\t";
+        for(int i = 0; i < choices.length - 1; i++) {
+            s += choices[i] + "\t";
         }
-        s += choices[choices.length-1] + "\n";
+        s += choices[choices.length - 1] + "\n";
         return s;
     }
 }
@@ -162,13 +162,18 @@ class Quiz {
         questions = new Question[onehundred];
     }
     /**
-     * Adds a question.
+     * returns size
      *
-     * @param      q     The question
+     * @return     size.
      */
     public int size() {
         return size;
     }
+    /**
+     * Adds a question.
+     *
+     * @param      q     The quarter
+     */
     public void addQuestion(final Question q) {
         questions[size++] = q;
 
@@ -210,7 +215,7 @@ public final class Solution {
     /**
      * NUMBER TO ELIMINATE MAGIC NUMBER.
      */
-    private static final int FIVE = 5; 
+    private static final int FIVE = 5;
     /**
     * Constructs the object.
     */
@@ -267,8 +272,8 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q) {
-        if(q == 0) {
+        final Quiz quiz,final int q) {
+        if (q == 0) {
             System.out.println("Quiz does not have questions");
             return;
         }
@@ -277,25 +282,25 @@ public final class Solution {
             String[] quesToken = ques.split(":");
             String[] choice = quesToken[1].split(",");
             //System.out.println(quesToken[0]);
-            if(quesToken[0].equals("") || choice.length == 0
-                || quesToken[2].equals("") || quesToken[THREE].equals("") || quesToken.length < FIVE) {
+            if (quesToken[0].equals("") || choice.length == 0
+                || quesToken[2].equals("") || quesToken[THREE].equals("")
+                || quesToken.length < FIVE) {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            if(choice.length < 2) {
+            if (choice.length < 2) {
                 System.out.println(quesToken[0]
                     + " does not have enough answer choices");
                 return;
-
             }
-            if(Integer.parseInt(quesToken[2]) < 1
+            if (Integer.parseInt(quesToken[2]) < 1
                 || Integer.parseInt(quesToken[2]) > choice.length) {
-                System.out.println("Error! Correct answer choice number is out of range for "
+                System.out.println(
+                    "Error! Correct answer choice number is out of range for "
                     + quesToken[0]);
                 return;
-
             }
-            if(Integer.parseInt(quesToken[THREE]) <= 0) {
+            if (Integer.parseInt(quesToken[THREE]) <= 0) {
                 System.out.println("Invalid max marks for " + quesToken[0]);
                 return;
 
@@ -304,8 +309,8 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + quesToken[0]);
                 return;
             } else {
-        Question qes = new Question(quesToken[0], quesToken[1].split(",")
-            , Integer.parseInt(quesToken[2]),
+        Question qes = new Question(quesToken[0], quesToken[1].split(","),
+        Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[THREE]), Integer.parseInt(quesToken[FOUR]));
         quiz.addQuestion(qes);
         }
