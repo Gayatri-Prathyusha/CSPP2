@@ -286,7 +286,7 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + quesToken[0]);
                 return;
             }else {
-        Question qes = new Question(quesToken[0], choice , Integer.parseInt(quesToken[2]),
+        Question qes = new Question(quesToken[0], quesToken[1].split(",") , Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
     }
