@@ -257,6 +257,7 @@ public final class Solution {
         final Quiz quiz, int q) {
         if(q == 0) {
             System.out.println("Quiz does not have questions");
+            return;
         }
         for (int i = 0; i < q; i++) {
             String ques = scan.nextLine();
