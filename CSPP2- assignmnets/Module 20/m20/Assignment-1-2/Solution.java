@@ -295,7 +295,7 @@ public final class Solution {
             , Integer.parseInt(quesToken[2]),
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
-        } 
+        }
     }
     System.out.println(q + " are added to the quiz");
     return;
@@ -315,12 +315,12 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        for(int i = 0; i < q; i++) {
+        for (int i = 0; i < q; i++) {
             System.out.println(quiz.getQuestion(i));
             String userresponse = scan.nextLine();
             //String[] userchoice = userresponse.split(" ");
             quiz.getQuestion(i).setResponse(userresponse);
-        } 
+        }
     }
     /**
      * Displays the score report.
@@ -333,25 +333,22 @@ public final class Solution {
         }
         int totalscore = 0;
         String s = "";
-        for(int i = 0; i < quiz.size(); i++) {
+        for (int i = 0; i < quiz.size(); i++) {
         //System.out.println(quiz.getQuestion(i).getResponse());
         Question q1 = quiz.getQuestion(i);
         String[] choic = q1.getChoice();
 
-        if(q1.getResponse().equals(choic[q1.getCorrectAnswer() - 1])) {
+        if (q1.getResponse().equals(choic[q1.getCorrectAnswer() - 1])) {
         s = q1.getQuestionText() + "\n" + " Correct Answer! - Marks Awarded: "
          + q1.getMaxMarks();
-         totalscore += q1.getMaxMarks(); 
-
+         totalscore += q1.getMaxMarks();
         } else {
         s = q1.getQuestionText() + "\n" + " Wrong Answer! - Penalty: " 
-         + q1.getPenalty(); 
-         totalscore += q1.getPenalty(); 
-
+         + q1.getPenalty();
+         totalscore += q1.getPenalty();
         }
         System.out.println(s);
-        
     }
-    System.out.println("Total Score: " +totalscore);
+    System.out.println("Total Score: " + totalscore);
     }
 }
