@@ -244,7 +244,12 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                
+                try{
+                    loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                } catch (Exception ex){
+                    System.out.println(ex.getMessage());
+                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -272,10 +277,9 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, final int q) {
+        final Quiz quiz, final int q)throws Exception {
         if (q == 0) {
-            System.out.println("Quiz does not have questions");
-            return;
+            throw new Exception("Quiz does not have questions");
         }
         for (int i = 0; i < q; i++) {
             String ques = scan.nextLine();
@@ -285,29 +289,24 @@ public final class Solution {
             if (quesToken[0].equals("") || choice.length == 0
                 || quesToken[2].equals("") || quesToken[THREE].equals("")
                 || quesToken.length < FIVE) {
-                System.out.println("Error! Malformed question");
-                return;
+                throw new Exception("Error! Malformed question");
             }
             if (choice.length < 2) {
-                System.out.println(quesToken[0]
+                throw new Exception(quesToken[0]
                     + " does not have enough answer choices");
-                return;
             }
             if (Integer.parseInt(quesToken[2]) < 1
                 || Integer.parseInt(quesToken[2]) > choice.length) {
-                System.out.println(
+                throw new Exception(
                     "Error! Correct answer choice number is out of range for "
                     + quesToken[0]);
-                return;
             }
             if (Integer.parseInt(quesToken[THREE]) <= 0) {
-                System.out.println("Invalid max marks for " + quesToken[0]);
-                return;
+                throw new Exception("Invalid max marks for " + quesToken[0]);
 
             }
             if (Integer.parseInt(quesToken[FOUR]) > 0) {
-                System.out.println("Invalid penalty for " + quesToken[0]);
-                return;
+                throw new Exception("Invalid penalty for " + quesToken[0]);
             } else {
         Question qes = new Question(quesToken[0], quesToken[1].split(","),
         Integer.parseInt(quesToken[2]),
