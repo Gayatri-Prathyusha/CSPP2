@@ -198,9 +198,22 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-     /**
-     * Constructs the object.
+
+    /**
+     * NUMBER TO ELIMINATE MAGIC NUMBER.
      */
+    private final int THREE = 3;
+    /**
+     * NUMBER TO ELIMINATE MAGIC NUMBER.
+     */
+    private final int FOUR = 4;
+    /**
+     * NUMBER TO ELIMINATE MAGIC NUMBER.
+     */
+    private final int FIVE = 5; 
+    /**
+    * Constructs the object.
+    */
     private Solution() {
         // leave this blank
     }
@@ -343,7 +356,7 @@ public final class Solution {
          + q1.getMaxMarks();
          totalscore += q1.getMaxMarks();
         } else {
-        s = q1.getQuestionText() + "\n" + " Wrong Answer! - Penalty: " 
+        s = q1.getQuestionText() + "\n" + " Wrong Answer! - Penalty: "
          + q1.getPenalty();
          totalscore += q1.getPenalty();
         }
