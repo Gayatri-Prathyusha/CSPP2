@@ -269,7 +269,7 @@ public final class Solution {
                 return;
             }
             if(choice.length < 2) {
-                System.out.println(quesToken[0] + "does not have enough answer choices");
+                System.out.println(quesToken[0] + " does not have enough answer choices");
                 return;
 
             }
