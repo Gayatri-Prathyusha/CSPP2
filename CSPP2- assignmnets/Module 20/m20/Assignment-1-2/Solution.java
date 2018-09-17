@@ -290,7 +290,7 @@ public final class Solution {
         Integer.parseInt(quesToken[3]), Integer.parseInt(quesToken[4]));
         quiz.addQuestion(qes);
     }
-    q--;
+    // q--;
         }
         System.out.println(q + " are added to the quiz");
         return;
