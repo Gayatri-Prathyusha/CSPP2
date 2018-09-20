@@ -36,24 +36,24 @@ class Bagofwords {
     }
   }
 
-  public double calculateNorm(Map<String, Integer> bow) {
+  public double calculateNorm(Map<String, Integer> bag) {
     // System.out.println("reached2");
     int s = 0;
-    for (String s1:bow.keySet()) {
-      s += Math.pow(bow.get(s1), 2);
+    for (String s1:bag.keySet()) {
+      s += Math.pow(bag.get(s1), 2);
     }
     // System.out.println(s);
     return Math.sqrt(s);
   }
 
-  public double crossProduct(Map<String, Integer> bow) {
+  public double crossProduct(Map<String, Integer> bag) {
     int s = 0;
     for (String s1:bagOfWords.keySet()) {
-      if (bow.containsKey(s1)) {
-        s += (bow.get(s1) * bagOfWords.get(s1));
+      if (bag.containsKey(s1)) {
+        s += (bag.get(s1) * bagOfWords.get(s1));
       }
     }
-    double d = s/(calculateNorm(bow) * calculateNorm(bagOfWords));
+    double d = s/(calculateNorm(bag) * calculateNorm(bagOfWords));
     // System.out.println(s);
     return d;
   }
@@ -89,29 +89,29 @@ public class Solution {
     for (int i = 0; i < input.size(); i++) {
       // System.out.println(inputnames.get(i));
       String s1 = input.get(i);
-      Bagofwords bow1 = new Bagofwords(s1);
+      Bagofwords bag1 = new Bagofwords(s1);
       // if (i == 0) {
-      //   System.out.println(bow1.getMap());
+      //   System.out.println(bag1.getMap());
       // }
-      // System.out.println(bow1.getString());
-      bow1.cleanWords();
-      bow1.calculateFrequency();
+      // System.out.println(bag1.getString());
+      bag1.cleanWords();
+      bag1.calculateFrequency();
       for (int j = 0; j < input.size(); j++) {
         // System.out.println(s1);
         // System.out.println(inputnames.get(j));
         String s2 = input.get(j);
         // System.out.println(s2);
-        Bagofwords bow2 = new Bagofwords(s2);
-        // System.out.println(bow2.getString());
-        bow2.cleanWords();
-        bow2.calculateFrequency();
+        Bagofwords bag2 = new Bagofwords(s2);
+        // System.out.println(bag2.getString());
+        bag2.cleanWords();
+        bag2.calculateFrequency();
         // if (i == 1) {
-        //   System.out.println(bow2.getMap());
+        //   System.out.println(bag2.getMap());
         // }
-        // System.out.println(bow1.getMap());
-        // System.out.println(bow2.getMap());
-        // System.out.println(bow1.crossProduct(bow2.getMap()));
-        resulttemp = bow1.crossProduct(bow2.getMap()) * 100;
+        // System.out.println(bag1.getMap());
+        // System.out.println(bag2.getMap());
+        // System.out.println(bag1.crossProduct(bag2.getMap()));
+        resulttemp = bag1.crossProduct(bag2.getMap()) * 100;
         int a = (int) Math.round(resulttemp);
         if (max < a && i != j) {
           max = a;
