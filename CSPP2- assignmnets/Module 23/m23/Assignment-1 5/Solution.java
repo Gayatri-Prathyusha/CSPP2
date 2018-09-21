@@ -10,7 +10,7 @@ public class Solution {
   /**
    * { var_description }.
    */
-  private static final int Hundred = 100;
+  protected static final int Hundred = 100;
   /**
    * { function_description }.
    *
@@ -18,7 +18,7 @@ public class Solution {
    *
    * @throws     Exception  { exception_description }
    */
-  protected static void main(final String[] args)throws Exception {
+  public static void main(final String[] args)throws Exception {
     /**
      * { var_description }.
      */
