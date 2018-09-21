@@ -57,43 +57,43 @@ class Bagofwords {
     // System.out.println(s);
     return d;
   }
-    public static int longestSubstring(String str1, String str2) {
-        char[] ch1 = str1.toCharArray();
-        char[] ch2 = str1.toCharArray();
-        int a = str1.length();
-        int b = str2.length();
-        int maxres = 0;
-        float sum = a + b;
-        System.out.println(sum);
+    // public static int longestSubstring(String str1, String str2) {
+    //     char[] ch1 = str1.toCharArray();
+    //     char[] ch2 = str1.toCharArray();
+    //     int a = str1.length();
+    //     int b = str2.length();
+    //     int maxres = 0;
+    //     float sum = a + b;
+    //     System.out.println(sum);
 
-        str1 = str1.replaceAll("[ ]", "");
-        str2 = str2.replaceAll("[ ]", "");
+    //     str1 = str1.replaceAll("[ ]", "");
+    //     str2 = str2.replaceAll("[ ]", "");
 
-        // int lcs = longestSubstring(line.toCharArray(), line1.toCharArray());
-        // System.out.println(lcs)
-        // int lenofstrings = ch1.length + ch2.length;
+    //     // int lcs = longestSubstring(line.toCharArray(), line1.toCharArray());
+    //     // System.out.println(lcs)
+    //     // int lenofstrings = ch1.length + ch2.length;
 
-        int[][] dp = new int[a + 1][b + 1];
+    //     int[][] dp = new int[a + 1][b + 1];
 
-        for(int i = 0; i <= a; i++) {
-            for(int j = 0 ; j <= b; j++) {
-                if(i == 0 || j == 0) {
-                    dp[i][j]= 0;
-                } else if (ch1[i - 1] == ch2[j - 1]) {
-                    dp[i][j] = dp[i-1][j-1]+1;
-                    maxres = Math.max(maxres, dp[i][j]);
-                } else {
-                    dp[i][j] = 0;
-                    }
-                }
-            }
-        float match = ((maxres * 2)/ sum) * 100;
-        //System.out.println(match);
-        int matchvalue = (int) match;
-        //System.out.println(matchvalue + "%");
+    //     for(int i = 0; i <= a; i++) {
+    //         for(int j = 0 ; j <= b; j++) {
+    //             if(i == 0 || j == 0) {
+    //                 dp[i][j]= 0;
+    //             } else if (ch1[i - 1] == ch2[j - 1]) {
+    //                 dp[i][j] = dp[i-1][j-1]+1;
+    //                 maxres = Math.max(maxres, dp[i][j]);
+    //             } else {
+    //                 dp[i][j] = 0;
+    //                 }
+    //             }
+    //         }
+    //     float match = ((maxres * 2)/ sum) * 100;
+    //     //System.out.println(match);
+    //     int matchvalue = (int) match;
+    //     //System.out.println(matchvalue + "%");
 
-        return matchvalue;
-    }
+    //     return matchvalue;
+    // }
 
 
 

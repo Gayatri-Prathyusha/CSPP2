@@ -68,7 +68,7 @@ public class Solution {
             max = a;
             s5 = "Maximum similarity is between "
              + inputarray[i] + " and " + inputarray[j];
-            System.out.println(bag1.longestSubstring(input.get(i), input.get(i+1)));
+            //System.out.println(bag1.longestSubstring(input.get(i), input.get(i+1)));
             //System.out.println();
           }
           results.add(a);
