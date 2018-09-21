@@ -49,7 +49,7 @@ public class Solution {
           int a = (int) Math.round(resulttemp);
           if (max < a && i != j) {
             max = a;
-            s5 = "Maximum similarity is between " + inputarray[i] + " and " + inputarray[i];
+            s5 = "Maximum similarity is between " + inputarray[i] + " and " + inputarray[j];
           }
           results.add(a);
         }
