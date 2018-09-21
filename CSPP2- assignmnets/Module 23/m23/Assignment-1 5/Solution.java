@@ -21,63 +21,49 @@ public class Solution {
         while (sc1.hasNext()) {
           s += sc1.nextLine() + " ";
         }
-        // System.out.println(s);
         input.add(s);
       } catch (FileNotFoundException e) {
         System.out.println(e.getMessage());
       }
     }
-    // System.out.println(input);
+    String[] inputarray = new String[inputnames.size()]; 
+    inputarray = inputnames.toArray(inputarray);
+    Arrays.sort(inputarray);
     ArrayList<Integer> results = new ArrayList<>();
     double resulttemp = 0.0;
     int max = 0;
     String s5 = "";
     for (int i = 0; i < input.size(); i++) {
-      // System.out.println(inputnames.get(i));
       String s1 = input.get(i);
       Bagofwords bag1 = new Bagofwords(s1);
-      // if (i == 0) {
-      //   System.out.println(bag1.getMap());
-      // }
-      // System.out.println(bag1.getString());
       bag1.cleanWords();
       bag1.calculateFrequency();
       for (int j = 0; j < input.size(); j++) {
-        // System.out.println(s1);
-        // System.out.println(inputnames.get(j));
         String s2 = input.get(j);
-        // System.out.println(s2);
         Bagofwords bag2 = new Bagofwords(s2);
-        // System.out.println(bag2.getString());
         bag2.cleanWords();
         bag2.calculateFrequency();
-        // if (i == 1) {
-        //   System.out.println(bag2.getMap());
-        // }
-        // System.out.println(bag1.getMap());
-        // System.out.println(bag2.getMap());
-        // System.out.println(bag1.crossProduct(bag2.getMap()));
+
         resulttemp = bag1.crossProduct(bag2.getMap()) * 100;
         int a = (int) Math.round(resulttemp);
         if (max < a && i != j) {
           max = a;
-          s5 = "Maximum similarity is between " + inputnames.get(i) + " and " + inputnames.get(j);
+          s5 = "Maximum similarity is between " + inputarray[i] + " and " + inputarray[i];
         }
         results.add(a);
       }
     }
-    // System.out.println(results.size());
     String s3 = "      \t";
-    for (String r:inputnames) {
+    System.out.println(inputarray.toString());
+    for (String r:inputarray) {
       s3 += r + "\t";
     }
     System.out.println(s3);
     int k = 0;
-    for (int i = 0; i < inputnames.size(); i++) {
-      String s4 = inputnames.get(i) + "\t";
+    for (int i = 0; i < inputarray.length; i++) {
+      String s4 = inputarray[i] + "\t";
       if (i != 0) {
         k = i * 4 + i;
-        // System.out.println(k);
       }
       for (int j = k; j < results.size(); j++) {
         // System.out.println(j);
