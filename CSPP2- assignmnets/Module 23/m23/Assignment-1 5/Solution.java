@@ -5,60 +5,6 @@ import java.util.Arrays;
 import java.io.*;
 import java.util.ArrayList;
 
-
-class Bagofwords {
-
-  private String[] string;
-  private Map <String, Integer> bagOfWords;
-
-  Bagofwords(final String string1) {
-    string = string1.split(" ");
-    bagOfWords = new HashMap<>();
-  }
-
-  public void cleanWords() {
-    for (int i = 0; i < string.length; i++) {
-      string[i] = string[i].replaceAll("[^a-zA-Z0-9_]", "").toLowerCase().trim();
-    }
-  }
-  public String getString() {
-    return Arrays.toString(string);
-  }
-  public Map getMap() {
-    return bagOfWords;
-  }
-  
-  public void calculateFrequency() {
-    // System.out.println("reached1");
-    for (String s1:string) {
-      bagOfWords.putIfAbsent(s1, 0);
-      bagOfWords.put(s1, bagOfWords.get(s1) + 1);  
-    }
-  }
-
-  public double calculateNorm(Map<String, Integer> bag) {
-    // System.out.println("reached2");
-    int s = 0;
-    for (String s1:bag.keySet()) {
-      s += Math.pow(bag.get(s1), 2);
-    }
-    // System.out.println(s);
-    return Math.sqrt(s);
-  }
-
-  public double crossProduct(Map<String, Integer> bag) {
-    int s = 0;
-    for (String s1:bagOfWords.keySet()) {
-      if (bag.containsKey(s1)) {
-        s += (bag.get(s1) * bagOfWords.get(s1));
-      }
-    }
-    double d = s/(calculateNorm(bag) * calculateNorm(bagOfWords));
-    // System.out.println(s);
-    return d;
-  }
-}
-
 public class Solution {
   public static void main(String[] args)throws Exception {
     ArrayList<String> input = new ArrayList<>();
@@ -126,14 +72,14 @@ public class Solution {
       s3 += r + "\t";
     }
     System.out.println(s3);
-    int i1 = 0;
+    int k = 0;
     for (int i = 0; i < inputnames.size(); i++) {
       String s4 = inputnames.get(i) + "\t";
       if (i != 0) {
-        i1 = i * 4 + i;
-        // System.out.println(i1);
+        k = i * 4 + i;
+        // System.out.println(k);
       }
-      for (int j = i1; j < results.size(); j++) {
+      for (int j = k; j < results.size(); j++) {
         // System.out.println(j);
         s4 += results.get(j) + "\t\t";
         if ((j + 1)%5 == 0 && j != 0) {
