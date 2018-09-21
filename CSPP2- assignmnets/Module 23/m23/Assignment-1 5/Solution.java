@@ -1,12 +1,27 @@
-import java.util.Map;
-import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-  public static void main(String[] args)throws Exception {
+  /**
+   * { var_description }
+   */
+  private static final int Hundred = 100;
+  /**
+   * { function_description }
+   *
+   * @param      args       The arguments
+   *
+   * @throws     Exception  { exception_description }
+   */
+  protected static void main(final String[] args)throws Exception {
+    /**
+     * { var_description }
+     */
     ArrayList<String> input = new ArrayList<>();
     ArrayList<String> inputnames = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
@@ -27,7 +42,7 @@ public class Solution {
           System.out.println(e.getMessage());
         }
       }
-      String[] inputarray = new String[inputnames.size()]; 
+      String[] inputarray = new String[inputnames.size()];
       inputarray = inputnames.toArray(inputarray);
       Arrays.sort(inputarray);
       ArrayList<Integer> results = new ArrayList<>();
@@ -45,11 +60,12 @@ public class Solution {
           bag2.cleanWords();
           bag2.calculateFrequency();
 
-          resulttemp = bag1.crossProduct(bag2.getMap()) * 100;
+          resulttemp = bag1.crossProduct(bag2.getMap()) * Hundred;
           int a = (int) Math.round(resulttemp);
           if (max < a && i != j) {
             max = a;
-            s5 = "Maximum similarity is between " + inputarray[i] + " and " + inputarray[j];
+            s5 = "Maximum similarity is between "
+             + inputarray[i] + " and " + inputarray[j];
           }
           results.add(a);
         }
@@ -70,7 +86,7 @@ public class Solution {
         for (int j = k; j < results.size(); j++) {
           // System.out.println(j);
           s4 += results.get(j) + "\t\t";
-          if ((j + 1)%(inputarray.length) == 0 && j != 0) {
+          if ((j + 1) % (inputarray.length) == 0 && j != 0) {
             break;
           }
         }
