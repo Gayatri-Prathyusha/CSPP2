@@ -8,11 +8,11 @@ import java.util.ArrayList;
  */
 public class Solution {
   /**
-   * { var_description }
+   * { var_description }.
    */
   private static final int Hundred = 100;
   /**
-   * { function_description }
+   * { function_description }.
    *
    * @param      args       The arguments
    *
@@ -20,7 +20,7 @@ public class Solution {
    */
   protected static void main(final String[] args)throws Exception {
     /**
-     * { var_description }
+     * { var_description }.
      */
     ArrayList<String> input = new ArrayList<>();
     ArrayList<String> inputnames = new ArrayList<>();
@@ -60,7 +60,7 @@ public class Solution {
           bag2.cleanWords();
           bag2.calculateFrequency();
 
-          resulttemp = bag1.crossProduct(bag2.getMap()) * Hundred;
+          resulttemp = bag1.crossProduct(bag2.getMap()) * 100;
           int a = (int) Math.round(resulttemp);
           if (max < a && i != j) {
             max = a;
