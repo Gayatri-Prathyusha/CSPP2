@@ -23,7 +23,7 @@ public class Solution {
         }
         input.add(s);
       } catch (FileNotFoundException e) {
-        System.out.println(e.getMessage());
+        System.out.println("empty directory");
       }
     }
     String[] inputarray = new String[inputnames.size()]; 
