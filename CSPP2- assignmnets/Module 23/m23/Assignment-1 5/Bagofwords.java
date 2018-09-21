@@ -18,7 +18,7 @@ class Bagofwords {
 
   public void cleanWords() {
     for (int i = 0; i < string.length; i++) {
-      string[i] = string[i].replaceAll("[^a-zA-Z0-9_]", " ").trim();
+      string[i] = string[i].replaceAll("[^a-zA-Z0-9_]", " ");
     }
   }
   public String getString() {
