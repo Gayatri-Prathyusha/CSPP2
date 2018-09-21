@@ -75,7 +75,7 @@ public class Solution {
         }
         System.out.println(s4);
       }
-      System.out.println(s5);
+      //System.out.println(s5);
     } catch (Exception e) {
       System.out.println("empty directory");
     }
