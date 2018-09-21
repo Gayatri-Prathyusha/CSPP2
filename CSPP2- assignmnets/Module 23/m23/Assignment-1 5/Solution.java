@@ -53,7 +53,7 @@ public class Solution {
         String s1 = input.get(i);
         //String str = s1.replaceAll("[ ]", "");
         Bagofwords bag1 = new Bagofwords(s1);
-        bag1.longestSubstring(input.get(i), input.get(i+1));
+        
         bag1.cleanWords();
         bag1.calculateFrequency();
         for (int j = 0; j < input.size(); j++) {
@@ -68,6 +68,7 @@ public class Solution {
             max = a;
             s5 = "Maximum similarity is between "
              + inputarray[i] + " and " + inputarray[j];
+            bag1.longestSubstring(input.get(i), input.get(i+1));
           }
           results.add(a);
         }
