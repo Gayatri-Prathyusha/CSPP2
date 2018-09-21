@@ -90,7 +90,7 @@ class Bagofwords {
         float match = ((maxres * 2)/ sum) * 100;
         //System.out.println(match);
         int matchvalue = (int) match;
-        System.out.println(matchvalue + "%");
+        System.out.println(matchvalue/100 + "%");
 
         return;
     }
