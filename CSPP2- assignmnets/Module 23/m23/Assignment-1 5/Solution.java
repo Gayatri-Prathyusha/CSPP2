@@ -69,13 +69,13 @@ public class Solution {
         for (int j = k; j < results.size(); j++) {
           // System.out.println(j);
           s4 += results.get(j) + "\t\t";
-          if ((j + 1)%5 == 0 && j != 0) {
+          if ((j + 1)%(inputarray.length) == 0 && j != 0) {
             break;
           }
         }
         System.out.println(s4);
       }
-      //System.out.println(s5);
+      System.out.println(s5);
     } catch (Exception e) {
       System.out.println("empty directory");
     }
