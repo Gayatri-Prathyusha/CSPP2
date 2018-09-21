@@ -54,6 +54,7 @@ public class Solution {
           results.add(a);
         }
       }
+      // System.out.println(results);
       String s3 = "\t\t";
       //System.out.println(inputarray.toString());
       for (String r:inputarray) {
@@ -64,7 +65,7 @@ public class Solution {
       for (int i = 0; i < inputarray.length; i++) {
         String s4 = inputarray[i] + "\t";
         if (i != 0) {
-          k = i * 4 + i;
+          k = i * (inputarray.length - 1) + i;
         }
         for (int j = k; j < results.size(); j++) {
           // System.out.println(j);
