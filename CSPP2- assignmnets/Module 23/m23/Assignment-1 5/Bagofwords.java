@@ -92,7 +92,7 @@ class Bagofwords {
         int matchvalue = (int) match;
         System.out.println(matchvalue + "%");
 
-      //return matchvalue;
+        return;
     }
 
 
