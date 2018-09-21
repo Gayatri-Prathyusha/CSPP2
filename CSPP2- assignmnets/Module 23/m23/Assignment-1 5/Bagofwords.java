@@ -57,7 +57,7 @@ class Bagofwords {
     // System.out.println(s);
     return d;
   }
-    public static void longestSubstring(String str1, String str2) {
+    public static int longestSubstring(String str1, String str2) {
         char[] ch1 = str1.toCharArray();
         char[] ch2 = str1.toCharArray();
         int a = str1.length();
@@ -90,9 +90,9 @@ class Bagofwords {
         float match = ((maxres * 2)/ sum) * 100;
         //System.out.println(match);
         int matchvalue = (int) match;
-        System.out.println(matchvalue/100 + "%");
+        //System.out.println(matchvalue + "%");
 
-        return;
+        return matchvalue;
     }
 
 
