@@ -51,7 +51,9 @@ public class Solution {
       String s5 = "";
       for (int i = 0; i < input.size(); i++) {
         String s1 = input.get(i);
+        //String str = s1.replaceAll("[ ]", "");
         Bagofwords bag1 = new Bagofwords(s1);
+        bag1.longestSubstring(input.get(i), input.get(i+1));
         bag1.cleanWords();
         bag1.calculateFrequency();
         for (int j = 0; j < input.size(); j++) {
