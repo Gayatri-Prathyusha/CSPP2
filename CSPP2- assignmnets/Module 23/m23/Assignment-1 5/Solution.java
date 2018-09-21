@@ -54,7 +54,7 @@ public class Solution {
       }
     }
     String s3 = "      \t";
-    System.out.println(inputarray.toString());
+    //System.out.println(inputarray.toString());
     for (String r:inputarray) {
       s3 += r + "\t";
     }
