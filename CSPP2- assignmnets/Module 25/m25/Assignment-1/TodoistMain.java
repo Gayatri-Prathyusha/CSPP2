@@ -15,7 +15,7 @@ public class TodoistMain {
   /**
    * Starts a test.
    */
-  public static void startTest() {
+  protected static void startTest() {
     Todoist todo = new Todoist();
     Scanner s = new Scanner(System.in);
     while (s.hasNext()) {
