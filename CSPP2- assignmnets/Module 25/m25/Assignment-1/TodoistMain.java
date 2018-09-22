@@ -3,13 +3,28 @@ import java.util.Arrays;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
+    /**
+     * Constructs the object.
+     */
     private TodoistMain() {
 
     }
+    /**
+     * to eliminate the magic number.
+     */
     private static final int THREE = 3;
+    /**
+     * to eliminate the magic number.
+     */
     private static final int FOUR = 4;
+    /**
+     * to eliminate the magic number.
+     */
     private static final int FIVE = 5;
+    /**
+     * to eliminate the magic number.
+     */
     private static final int SIX = 6;
   /**
    * Starts a test.
