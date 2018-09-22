@@ -10,6 +10,10 @@ import java.util.Arrays;
  * Class for todoist main.
  */
 public class TodoistMain {
+    public static final int Three = 3;
+    public static final int Four = 4;
+    public static final int Five = 5;
+    public static final int Six = 6;
 
   /**
    * Starts a test.
@@ -85,10 +89,10 @@ public class TodoistMain {
   public static Task createTask(final String[] tokens) throws Exception {
     String title = tokens[1];
     String assignedTo = tokens[2];
-    int timeToComplete = Integer.parseInt(tokens[3]);
-    boolean important = tokens[4].equals("y");
-    boolean urgent = tokens[5].equals("y");
-    String status = tokens[6];
+    int timeToComplete = Integer.parseInt(tokens[Three]);
+    boolean important = tokens[Four].equals("y");
+    boolean urgent = tokens[Five].equals("y");
+    String status = tokens[Six];
     return new Task(
              title, assignedTo, timeToComplete, important, urgent, status);
   }
