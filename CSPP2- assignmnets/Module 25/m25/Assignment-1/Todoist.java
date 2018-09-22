@@ -67,7 +67,7 @@ class Todoist {
     }
     return sendtask;
     }
-    public int totalTimeCalculate() {
+    public int totalTime4Completion() {
     int total = 0;
     for(int i = 0; i < size; i++) {
     	if(tasks[i].getStatus().equals("todo")) {
