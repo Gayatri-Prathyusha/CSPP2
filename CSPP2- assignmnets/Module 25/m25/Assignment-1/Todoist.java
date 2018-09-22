@@ -43,23 +43,39 @@ class Todoist {
         }
 
     }
-
     if (!val) {
       sendtask = null;
     }
-
     return sendtask;
-  }
-
-  public String toString() {
-    String sendtask = "";
-    for (int i = 0; i < size; i++) {
-      sendtask = sendtask + tasks[i].getTitle() + ", " + tasks[i].getassignedTo() +  ", "
-            + tasks[i].getTimeToComplete() +  ", " + tasks[i].getImportant()
-            +  ", " + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
+    }
+    public Task[] getNextTask(final String person, final int count) {
+        Task[] sendtask = new Task[count];
+    	boolean val = false;
+    	int j = 0;
+    	for (int i = 0; i < size; i++) {
+      		if (tasks[i].getassignedTo().equals(person)) {
+        		if (tasks[i].getStatus().equals("todo")
+            		&& tasks[i].getImpStatus() && !tasks[i].getUrgStatus() && j < count) {
+          		sendtask[j] = tasks[i];
+          val = true;
+          j += 1;
+        }
+      }
+    }
+    if (!val) {
+      sendtask = null;
     }
     return sendtask;
-  }
+    }
+    public String toString() {
+    	String str = "";
+    	for (int i = 0; i < size; i++) {
+      		str = str + tasks[i].getTitle() + ", " + tasks[i].getassignedTo() +  ", "
+            		+ tasks[i].getTimeToComplete() +  ", " + tasks[i].getImportant()
+            		+  ", " + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
+    	}
+    return str;
+    }
 
 
 }
