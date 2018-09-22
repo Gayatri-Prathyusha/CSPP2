@@ -67,6 +67,15 @@ class Todoist {
     }
     return sendtask;
     }
+    public int totalTimeCalculate() {
+    int total = 0;
+    for(int i = 0; i < size; i++) {
+    	if(tasks[i].getStatus().equals("todo")) {
+    		total += tasks[i].getTimeToComplete();
+    	}
+    }
+    return total;
+    }
     public String toString() {
     	String str = "";
     	for (int i = 0; i < size; i++) {
