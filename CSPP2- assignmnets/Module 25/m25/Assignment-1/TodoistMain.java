@@ -84,16 +84,16 @@ public class TodoistMain {
    * @throws     Exception  if task inputs are invalid
    */
   public static Task createTask(final String[] tokens) throws Exception {
-    final int Three = 3;
-    final int Four = 4;
-    final int Five = 5;
-    final int Six = 6;
+    final int THREE = 3;
+    final int FOUR = 4;
+    final int FIVE = 5;
+    final int SIX = 6;
     String title = tokens[1];
     String assignedTo = tokens[2];
-    int timeToComplete = Integer.parseInt(tokens[Three]);
-    boolean important = tokens[Four].equals("y");
-    boolean urgent = tokens[Five].equals("y");
-    String status = tokens[Six];
+    int timeToComplete = Integer.parseInt(tokens[THREE]);
+    boolean important = tokens[FOUR].equals("y");
+    boolean urgent = tokens[FIVE].equals("y");
+    String status = tokens[SIX];
     return new Task(
              title, assignedTo, timeToComplete, important, urgent, status);
   }
