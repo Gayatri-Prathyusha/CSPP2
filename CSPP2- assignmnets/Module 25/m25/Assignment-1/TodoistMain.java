@@ -1,21 +1,20 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
-/**
-  * write your code below this comment
-  */
-
-
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
+    private TodoistMain() {
 
-
+    }
+    private static final int THREE = 3;
+    private static final int FOUR = 4;
+    private static final int FIVE = 5;
+    private static final int SIX = 6;
   /**
    * Starts a test.
    */
-  protected static void startTest() {
+  public static void startTest() {
     Todoist todo = new Todoist();
     Scanner s = new Scanner(System.in);
     while (s.hasNext()) {
@@ -84,10 +83,6 @@ public class TodoistMain {
    * @throws     Exception  if task inputs are invalid
    */
   public static Task createTask(final String[] tokens) throws Exception {
-    final int THREE = 3;
-    final int FOUR = 4;
-    final int FIVE = 5;
-    final int SIX = 6;
     String title = tokens[1];
     String assignedTo = tokens[2];
     int timeToComplete = Integer.parseInt(tokens[THREE]);
