@@ -51,14 +51,14 @@ class Todoist {
     public Task[] getNextTask(final String person, final int count) {
         Task[] sendtask = new Task[count];
     	boolean val = false;
-    	int j = 0;
+    	int index = 0;
     	for (int i = 0; i < size; i++) {
       		if (tasks[i].getassignedTo().equals(person)) {
         		if (tasks[i].getStatus().equals("todo")
-            		&& tasks[i].getImpStatus() && !tasks[i].getUrgStatus() && j < count) {
-          		sendtask[j] = tasks[i];
+            		&& tasks[i].getImpStatus() && !tasks[i].getUrgStatus() && index < count) {
+          		sendtask[index] = tasks[i];
           val = true;
-          j += 1;
+          index += 1;
         }
       }
     }
