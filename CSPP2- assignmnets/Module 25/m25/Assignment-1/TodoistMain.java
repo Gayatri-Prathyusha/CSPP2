@@ -10,10 +10,7 @@ import java.util.Arrays;
  * Class for todoist main.
  */
 public class TodoistMain {
-    public static final int Three = 3;
-    public static final int Four = 4;
-    public static final int Five = 5;
-    public static final int Six = 6;
+
 
   /**
    * Starts a test.
@@ -87,6 +84,10 @@ public class TodoistMain {
    * @throws     Exception  if task inputs are invalid
    */
   public static Task createTask(final String[] tokens) throws Exception {
+    final int Three = 3;
+    final int Four = 4;
+    final int Five = 5;
+    final int Six = 6;
     String title = tokens[1];
     String assignedTo = tokens[2];
     int timeToComplete = Integer.parseInt(tokens[Three]);
