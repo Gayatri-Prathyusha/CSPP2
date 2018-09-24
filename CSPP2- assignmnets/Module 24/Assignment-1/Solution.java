@@ -50,48 +50,27 @@ class Text {
 				}
 			}
 		}
-		//System.out.println(numerator);
+
 		for (String inList1 : list1.keySet()) {
 			firstSum += Math.pow(list1.get(inList1),2);
 		}
 		for (String inList2 : list2.keySet()) {
 			secondSum += Math.pow(list2.get(inList2),2);
 		}
-		//System.out.println(firstSum);
-		//System.out.println(secondSum);
+
 		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
 		double result = ((numerator / denominator) * 100D)/100D;
-		//System.out.println(result);
 		return (int) (result * 100);
 	}
 }
-	//public static void stringMatching(String file1, String file2) {
-	// 	file1 = file1.toLowerCase();
-	// 	String[] tokens = file1.replaceAll("[^A-Za-z \\s]","").split(" ");
-	// 	file2 = file2.toLowerCase();
-	// 	String[] check = file2.replaceAll("[^A-Za-z \\s]","").split(" ");
-	// 	for (int i = 0; i<tokens.length; i++) {
-	// 		String
 
-	// 	}
-
-
-	// }
-//}
 
 class Solution {
 	public Solution() {
 
 	}
 	public static void main(String[] args) {
-		// File folder = new File("");
-		// File[] listOfFiles = folder.listFiles();
-		// for (int i = 0; i < listOfFiles.length; i++) {
-		// 	File file = listOfFiles[i];
-		// 	if (file.isFile() && file.getName().endsWith(".txt")) {
-		// 		String content = FileUtils.readFileToString(file);
-		// 	}
-		// }
+
 		try {
 		Scanner s = new Scanner(System.in);
 		String readFile;
